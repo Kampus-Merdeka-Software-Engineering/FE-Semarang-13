@@ -13,17 +13,18 @@ body {
 }
 
 .home-brand {
-  margin: 76px 80px;
-}
-
-.hero {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
+.text-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
 .text {
   margin-top: 150px;
-  margin-left: 62px;
 }
 
 .text h1 {
@@ -40,7 +41,6 @@ body {
 
 .form-search form {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   padding: 8px;
   margin-top: 24px;
@@ -50,17 +50,19 @@ body {
   font-size: 15px;
   font-weight: 500;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 400px;
 }
 
 .form-search input {
-  width: 276px;
-  height: 28px;
+  margin-left: 20px;
+  margin-right: 30px;
+  width: 200px;
   border: none;
   outline: none;
 }
 
 .form-search button {
-  width: 140px;
+  padding: 8px 24px;
   height: 42px;
   border-radius: 96px;
   border: none;
@@ -80,14 +82,14 @@ body {
   scale: 0.9;
 }
 
-.image {
-  margin-bottom: 100px;
+.form-search svg {
+  margin-left: 10px;
 }
 
-.image img {
+.img-hero {
+  margin-top: 50px;
   width: 650px;
   height: 400px;
-  margin-right: 32px;
 }
 
 .content-2 {
@@ -106,14 +108,9 @@ body {
   margin-top: 50px;
 }
 
-.fill-content {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .content-a {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 80px;
 }
@@ -126,7 +123,6 @@ body {
 .text-a {
   width: 440px;
   height: auto;
-  margin-left: 200px;
 }
 
 .text-a h3 {
@@ -137,20 +133,19 @@ body {
 
 .content-b {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 50px;
 }
 
 .img-b img {
-  width: 600px;
+  width: 460px;
   height: 385px;
-  margin-left: 62px;
 }
 
 .text-b {
   width: 440px;
   height: auto;
-  margin-left: 72px;
 }
 
 .text-b h3 {
@@ -161,8 +156,8 @@ body {
 
 .content-c {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  padding-right: 90px;
 }
 
 .img-c img {
@@ -173,7 +168,6 @@ body {
 .text-c {
   width: 440px;
   height: auto;
-  margin-left: 100px;
 }
 
 .text-c h3 {
@@ -183,28 +177,44 @@ body {
 }
 
 .content-3 {
-  display: flex;
-  justify-content: center;
   background-color: white;
+  position: relative; /* Tambahkan posisi relatif pada .content-3 */
+  padding-bottom: 100px;
 }
 
-.bg-green {
-  text-align: center;
-  width: 1470px;
-  height: 400px;
-  margin-bottom: 400px;
-  background-color: #d1d646;
-  border-radius: 0px 0px 70px 70px;
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #D1D646;
+  border-radius: 0px 0px 70px 70px; /* Tambahkan border-radius pada elemen .background */
 }
 
-.content-3-header h1 {
+
+.isi-content-3 {
+  position: relative;
+  z-index: 1; /* Mengatur z-index agar konten tetap di atas latar belakang */
+  /* Gaya lainnya sesuai kebutuhan Anda */
+}
+
+
+.header-content-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content-3 h1 {
   color: #212738;
-  font-size: 44px;
+  font-size: 42px;
   font-weight: 650;
-  padding-top: 42px;
+  padding-top: 50px;
 }
 
-.content-3-header svg {
+.header-content-3 svg {
   width: 160px;
   height: 16px;
   margin-left: 240px;
@@ -212,23 +222,23 @@ body {
 
 .card {
   display: flex;
-  justify-content: center;
-  width: auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-top: 50px;
 }
 
 .card-1 {
+  width: 300px;
+  margin: 10px;
   border-radius: 14px;
   background: #fff;
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.25);
-  width: 320px;
-  height: auto;
-  margin: 0px 10px;
+  text-align: center;
 }
 
 .card-1 img {
-  width: 300px;
-  height: 250px;
+  width: 100%;
+  height: 260px;
 }
 
 .accsess {
@@ -270,22 +280,19 @@ body {
   font-size: 12px;
   font-weight: 400;
   margin-left: 18px;
-  margin-bottom: 24px;
-  width: 300px;
   text-align: left;
 }
 
 .bottom {
   display: flex;
   justify-content: space-between;
-  margin-left: 18px;
+  margin: 20px 20px;
 }
 
 .bottom h4 {
   color: #fd661f;
   font-size: 16px;
   font-weight: 700;
-  margin-top: 12px;
 }
 
 .bottom button {
@@ -297,8 +304,6 @@ body {
   color: white;
   font-size: 12px;
   font-weight: 500;
-  margin-right: 18px;
-  margin-bottom: 20px;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
@@ -352,11 +357,10 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
-  width: 1084px;
   border-radius: 14px;
   background-color: #f97068;
-  margin: 0px auto;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 40px 0;
 }
 
