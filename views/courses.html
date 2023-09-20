@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/courses.css" />
+    <title>Courses</title>
+    <script src="../components/Header.js"></script>
+    <script src="../components/Footer.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header-component></header-component>
+    <!-- End Navbar -->
+
+    <!-- Konten 1 -->
+    <section class="courses">
+      <div class="banner">
+        <div class="banner-1">
+          <h1>Find the Course you <span>Choose</span></h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="179"
+            height="11"
+            viewBox="0 0 179 11"
+            fill="none">
+            <path
+              d="M1 8.32205C49.5338 0.233079 116.717 -0.441044 177.834 8.32205"
+              stroke="#96CEDF"
+              stroke-width="4"/>
+          </svg>
+          <h3>Get ready for the course you choose</h3>
+        </div>
+        <form action="hasil_pencarian.php" method="GET" class="search-form">
+          <input
+            type="text"
+            name="query"
+            placeholder="Find the Course"
+            class="search-input"/>
+          <button type="submit" class="search-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none">
+              <g clip-path="url(#clip0_117_6005)">
+                <path
+                  d="M31.5625 27.6688L25.3312 21.4375C25.05 21.1562 24.6687 21 24.2687 21H23.25C24.975 18.7938 26 16.0187 26 13C26 5.81875 20.1812 0 13 0C5.81875 0 0 5.81875 0 13C0 20.1812 5.81875 26 13 26C16.0187 26 18.7937 24.975 21 23.25V24.2687C21 24.6687 21.1562 25.05 21.4375 25.3312L27.6687 31.5625C28.2562 32.15 29.2062 32.15 29.7875 31.5625L31.5562 29.7938C32.1437 29.2063 32.1437 28.2563 31.5625 27.6688ZM13 21C8.58125 21 5 17.425 5 13C5 8.58125 8.575 5 13 5C17.4187 5 21 8.575 21 13C21 17.4188 17.425 21 13 21Z"
+                  fill="#212738"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_117_6005">
+                  <rect width="32" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </form>
+        <div class="image">
+          <img src="../img/search.png" alt=""/>
+        </div>
+      </div>
+    </section>
+    <!-- End Kontent 1 -->
+
+    <!-- Kontent 2 -->
+   <section class="content-2">
+        <div class="fill-card" id="cards-container">
+            <!-- Data dari JSON akan dimasukkan di sini menggunakan JavaScript -->
+        </div>
+        <div class="view-courses">
+            <button id="view-courses-button">View All Courses</button>
+        </div>
+    </section>
+    <!-- End Kontent 2 -->
+
+    <!-- Footer -->
+    <footer-component></footer-component>
+    <!-- End Footer -->
+
+    <script src="../script/courses.js"></script>
+  </body>
+</html>

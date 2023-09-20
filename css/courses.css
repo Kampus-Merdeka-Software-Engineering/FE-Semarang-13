@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f8918b;
+}
+
+.courses {
+  display: flex;
+  justify-content: center;
+  background-color: #f8918b;
+  color: #212738;
+  margin-top: 136px;
+}
+
+.banner-1 h1 {
+  color: #212738;
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.banner-1 span {
+  color: #212738;
+  font-weight: 700;
+}
+
+.banner-1 svg {
+  margin-left: 500px;
+  width: 200px;
+  height: 16px;
+  stroke-width: 4px;
+  stroke: #96cedf;
+}
+
+.banner-1 h3 {
+  justify-content: center;
+  margin-left: 112px;
+  color: #212738;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 24px;
+  border-radius: 20px;
+  border: none;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+}
+
+.search-button {
+  border-radius: 10px;
+  background: #d1d646;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 8px 16px 4px 16px;
+}
+
+.image {
+  margin-left: 60px;
+  position: absolute;
+  z-index: -1;
+}
+
+.content-2 {
+  margin-top: 300px;
+  border-radius: 70px 70px 0px 0px;
+  background: #edf2ef;
+}
+
+.fill-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0px 200px;
+}
+
+.card {
+  margin-bottom: 80px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+
+.card:active {
+  scale: 0.95;
+}
+
+.card img {
+  width: 300px;
+  height: 280px;
+  margin-top: 24px;
+}
+
+.card h3 {
+  color: #212738;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 16px 0px 16px 0px;
+}
+
+.card button {
+  width: 360px;
+  height: 72px;
+  border-radius: 0px 0px 14px 14px;
+  background: #d1d646;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.view-courses {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.view-courses button {
+  width: 350px;
+  height: 72px;
+  border-radius: 20px;
+  background: #212738;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.view-courses button:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+
+.view-courses button:active {
+  scale: 0.95;
+}
