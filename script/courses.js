@@ -23,11 +23,6 @@
                 "title": "Social Science",
                 "buttonText": "Click to Learn More"
             },
-            {
-                "imgSrc": "../img/ips.png",
-                "title": "Icha Love Yoko",
-                "buttonText": "Click to Learn More"
-            }
         ],
         "viewCoursesButton": "View All Courses"
     }
