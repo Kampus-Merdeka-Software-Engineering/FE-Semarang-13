@@ -1,4 +1,3 @@
- // courses.js
  // Data JSON yang telah Anda buat
  var jsonData = {
     "content-2": {
@@ -60,7 +59,6 @@ function populateContent() {
     viewCoursesButton.textContent = content2Data.viewCoursesButton;
 }
 
-// Panggil fungsi untuk menampilkan data dari JSON ke dalam HTML
 populateContent();
 
 // Fungsi untuk menangani klik tombol "Click to Learn More"

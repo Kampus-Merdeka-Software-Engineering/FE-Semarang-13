@@ -12,6 +12,7 @@ body {
   background-color: #57c4e5;
 }
 
+/* Content 1 */
 .home-brand {
   display: flex;
   justify-content: center;
@@ -21,8 +22,10 @@ body {
 .text-form {
   display: flex;
   flex-direction: column;
+  padding-right: 50px;
   margin-top: 50px;
 }
+
 .text {
   margin-top: 150px;
 }
@@ -88,10 +91,12 @@ body {
 
 .img-hero {
   margin-top: 50px;
-  width: 650px;
-  height: 400px;
+  width: 44rem;
+  height: 460px;
 }
+/* End Content 1 */
 
+/* Content 2 */
 .content-2 {
   background-color: #edf2ef;
 }
@@ -175,10 +180,12 @@ body {
   font-size: 24px;
   font-weight: 550;
 }
+/* End Content 2 */
 
+/*Content 3 */
 .content-3 {
   background-color: white;
-  position: relative; /* Tambahkan posisi relatif pada .content-3 */
+  position: relative;
   padding-bottom: 100px;
 }
 
@@ -188,17 +195,14 @@ body {
   left: 0;
   width: 100%;
   height: 50%;
-  background: #D1D646;
-  border-radius: 0px 0px 70px 70px; /* Tambahkan border-radius pada elemen .background */
+  background: #d1d646;
+  border-radius: 0px 0px 70px 70px;
 }
-
 
 .isi-content-3 {
   position: relative;
-  z-index: 1; /* Mengatur z-index agar konten tetap di atas latar belakang */
-  /* Gaya lainnya sesuai kebutuhan Anda */
+  z-index: 1;
 }
-
 
 .header-content-3 {
   display: flex;
@@ -220,7 +224,7 @@ body {
   margin-left: 240px;
 }
 
-.card {
+.card-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -279,7 +283,7 @@ body {
   color: #4d4d4d;
   font-size: 12px;
   font-weight: 400;
-  margin-left: 18px;
+  margin: 0px 18px;
   text-align: left;
 }
 
@@ -311,19 +315,19 @@ body {
 .bottom button:hover {
   background-color: #0e4e52;
 }
+/* End Content 3 */
 
+/* Content 4 */
 .content-4 {
   background: #edf2ef;
   padding-bottom: 100px;
 }
 
 .banner {
-  display: flex;
-  justify-content: left;
   color: #2b2b2b;
   margin-left: 50px;
   padding-top: 70px;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 700;
 }
 
@@ -336,13 +340,12 @@ body {
 
 .fill {
   text-align: center;
-  margin: 50px auto;
+  margin: 50px 50px;
   width: 500px;
 }
 
 .fill img {
   width: 507px;
-  height: 339px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -379,7 +382,7 @@ p {
   font-weight: 400;
 }
 
-.isi-kontak form {
+.isi-kontak {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -447,4 +450,348 @@ input[type="submit"]:hover {
 input[type="submit"]:active {
   scale: 0.95;
 }
+/* End Content 4 */
 
+/* Responsive Mobile */
+@media (max-width: 720px) {
+  /* Content 1 */
+  .home-brand {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-form {
+    padding-right: 0px;
+    margin-top: 20px;
+  }
+
+  .text {
+    margin-top: 0px;
+  }
+
+  .text h1 {
+    font-size: 32px;
+  }
+
+  .text h1 span {
+    font-size: 32px;
+  }
+
+  .form-search {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+  }
+
+  .form-search form {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 16px;
+  }
+
+  .form-search input {
+    margin: 10px 0;
+    width: 100%;
+    font-size: 12px;
+    padding-left: 10px;
+  }
+
+  .form-search button {
+    padding: 0px 12px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .img-hero {
+    align-self: center;
+    width: 280px;
+    height: 180px;
+  }
+  /* End Content 1 */
+
+  /* Content 2 */
+  .header h1 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  .content-a,
+  .content-b,
+  .content-c {
+    margin-top: 20px;
+  }
+
+  .img-a img {
+    width: 200px;
+    height: 180px;
+  }
+
+  .img-b img {
+    width: 220px;
+    height: 170px;
+  }
+
+  .img-c img {
+    width: 240px;
+    height: 180px;
+  }
+
+  .text-a h3,
+  .text-b h3,
+  .text-c h3 {
+    font-size: 12px;
+  }
+
+  .text-a p,
+  .text-b p,
+  .text-c p {
+    font-size: 8px;
+  }
+  /* End Content 2 */
+
+  /* Content 3 */
+  .content-3 {
+    padding-bottom: 50px;
+  }
+
+  .background {
+    height: 20%;
+  }
+
+  .header-content-3 h1 {
+    font-size: 24px;
+    padding-top: 30px;
+  }
+
+  .header-content-3 svg {
+    width: 90px;
+    height: 16px;
+    margin-left: 130px;
+  }
+
+  .card-1 {
+    width: 250px;
+    margin: 10px;
+  }
+
+  .card-1 img {
+    height: 230px;
+  }
+
+  .accsess {
+    display: flex;
+    justify-content: center;
+    width: 140px;
+  }
+
+  .card-1 h5 {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top: 12px;
+  }
+
+  .card-1 h1 {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .card-1 p {
+    font-size: 12px;
+    margin: 0px 10px;
+  }
+
+  .bottom {
+    margin: 10px 12px;
+  }
+
+  .bottom h4 {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .bottom button {
+    width: 95px;
+    height: 35px;
+  }
+  /* End Content 3 */
+
+  /* Content 4 */
+  .banner {
+    margin-left: 24px;
+    padding-top: 25px;
+    font-size: 18px;
+  }
+
+  .fill {
+    width: auto;
+  }
+
+  .fill img {
+    width: 280px;
+    height: auto;
+  }
+
+  .fill h1,
+  p {
+    font-size: 14px;
+    margin: 0px;
+  }
+
+  .contact {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .text-kontak h2 {
+    font-size: 20px;
+  }
+
+  .text-kontak p {
+    font-size: 12px;
+  }
+
+  .isi-kontak {
+    padding-top: 0px;
+  }
+
+  input[type="text1"],
+  input[type="email"] {
+    font-size: 10px;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  .message {
+    margin: 25px;
+  }
+
+  textarea {
+    font-size: 10px;
+    width: 450px;
+    height: 250px;
+    margin-bottom: 0px;
+  }
+
+  input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  /* End Content 4 */
+}
+
+@media (min-width: 721px) and (max-width: 1080px) {
+  /* Content 1 */
+  .text-form {
+    padding-right: 10px;
+    margin-top: 30px;
+  }
+
+  .text {
+    margin-top: 130px;
+  }
+
+  .text h1 {
+    font-size: 45px;
+    font-weight: 750;
+  }
+
+  .text h1 span {
+    font-size: 45px;
+    font-weight: 750;
+  }
+
+  .img-hero {
+    margin-top: 30px;
+    width: 33rem;
+    height: 340px;
+  }
+  /* End Content 1 */
+
+  /* Content 2 */
+  .header h1 {
+    font-size: 32px;
+    font-weight: 650;
+    margin-top: 50px;
+  }
+
+  .img-a img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .img-b img {
+    width: 380px;
+    height: 320px;
+  }
+
+  .img-c img {
+    width: 430px;
+    height: 330px;
+  }
+
+  .text-a,
+  .text-b,
+  .text-c {
+    width: 350px;
+    height: auto;
+  }
+
+  .text-a h3,
+  .text-b h3,
+  .text-c h3 {
+    font-size: 20px;
+    font-weight: 550;
+  }
+
+  .text-a p,
+  .text-b p,
+  .text-c p {
+    font-size: 14px;
+  }
+  /* End Content 2 */
+
+  /*Content 3 */
+  .background {
+    height: 34%;
+  }
+
+  .header-content-3 h1 {
+    font-size: 32px;
+    padding-top: 30px;
+  }
+
+  .header-content-3 svg {
+    width: 130px;
+    margin-left: 180px;
+  }
+
+  .card-1 {
+    margin: 50px;
+  }
+  /* End Content 3 */
+
+  /* Content 4 */
+  .banner {
+    font-size: 24px;
+  }
+
+  .contact {
+    max-width: 850px;
+  }
+
+  input[type="text1"],
+  input[type="email"] {
+    width: 350px;
+  }
+
+  textarea {
+    width: 750px;
+  }
+  /* End Content 4 */
+}

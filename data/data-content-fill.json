@@ -1,0 +1,25 @@
+{
+    "sections": [
+      {
+        "imageSrc": "../img/konten-5.1.png",
+        "title": "Latest Material",
+        "description": "This latest material is specifically designed to inspire creativity, stimulate curiosity and expand your knowledge. We believe that learning should be fun and engaging, and that's what we offer here."
+      },
+      {
+        "imageSrc": "../img/konten-5.2.png",
+        "title": "Material Discussion Video",
+        "description": "We understand that every child has a different way of learning. Through these learning videos, we hope to provide fun insights into a variety of topics, from science to math, languages, and more."
+      },
+      {
+        "imageSrc": "../img/konten-5.3.png",
+        "title": "Mentorship",
+        "description": "Through our mentorship program, we aim to provide the necessary support for children to achieve academic success and develop into individuals who are creative, open-minded, and ready to face future challenges."
+      },
+      {
+        "imageSrc": "../img/kontent-5.4.png",
+        "title": "Community Forum",
+        "description": "We are thrilled to have you join us on this fun, educational journey. This forum is a great place to share knowledge, experience and inspiration in the world of education for children."
+      }
+    ]
+  }
+  

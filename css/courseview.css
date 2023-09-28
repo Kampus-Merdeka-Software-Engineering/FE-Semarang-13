@@ -29,8 +29,8 @@ body {
   margin-left: 200px;
 }
 
-.card-course img {
-  width: 360px;
+.img-card{
+  margin: 0 auto;
   height: 370px;
 }
 
@@ -97,7 +97,7 @@ body {
 
 .card-course button {
   margin-top: 10px;
-  width: 400px;
+  width: 100%;
   height: 72px;
   border-radius: 0px 0px 14px 14px;
   background-color: #f8918b;
@@ -110,11 +110,11 @@ body {
 
 .course-detail {
   margin-top: 180px;
-  margin-right: 300px;
+  margin-right: 200px;
 }
 
 .intro-card h1 {
-  width: 400px;
+  width: 500px;
   color: black;
   font-size: 40px;
   font-weight: 700;

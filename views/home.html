@@ -9,6 +9,7 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../css/home.css" />
     <title>Home</title>
     <script src="../components/Header.js"></script>
@@ -21,7 +22,7 @@
 
     <!-- Konten 1 -->
       <section class="home-brand">
-        <div class="text-form">
+        <div class="text-form" data-aos="fade-right" data-aos-duration="2000"  data-aos-delay="100">
           <div class="text">
             <h1>
               Educational <br />
@@ -61,7 +62,7 @@
               <button type="submit">Search</button>
           </div>
         </div>
-          <img src="../img/pict-home.png" alt=""  class="img-hero"/>
+          <img src="../img/pict-home.png" alt=""  class="img-hero" data-aos="fade-left" data-aos-duration="1000"/>
     </section>
     <!-- End Konten 1 -->
 
@@ -80,7 +81,7 @@
               We’ve got a comprehensive syllabus that leaves nothing untouched
               and with our localized contents and examples, you are sure to
               grasp programming concepts easier and faster even without prior
-              experience (i.e. as a beginner).
+              experience.
             </p>
           </div>
         </div>
@@ -88,8 +89,11 @@
           <div class="text-b">
             <h3>Attractive with an Appearance Specifically for Children</h3>
             <p>
-              With StackJunior’s flexible learning options and 1-on-1 code
-              review with seasoned tutors, your learning is suited just for you.
+              Providing a cheerful interface, age-appropriate content, a fun 
+              learning approach, safety, easy accessibility, and contributing 
+              to children's educational progress. This website enables children 
+              to learn in a safe and engaging manner, enhancing their motivation 
+              to learn.
             </p>
           </div>
           <div class="img-b">
@@ -103,8 +107,10 @@
           <div class="text-c">
             <h3>An Interactive Personalized Learning Experience</h3>
             <p>
-              With StackJunior’s flexible learning options and 1-on-1 code
-              review with seasoned tutors, your learning is suited just for you.
+              An educational website that provides a personalized learning 
+              experience from teachers. The advantages include interesting learning, 
+              tailored to individual abilities, easy access, monitoring and security, 
+              as well as contribution to children's educational progress.
             </p>
           </div>
         </div>
@@ -117,86 +123,21 @@
       <div class="isi-content-3">
         <div class="header-content-3">
           <h1>Popular Course</h1>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="179"
-              height="11"
-              viewBox="0 0 179 11"
-              fill="none"
-            >
-              <path
-                d="M0.999969 8.34622C49.5338 0.257249 116.717 -0.416874 177.834 8.34622"
-                stroke="#F97068"
-                stroke-width="4"
-              />
-            </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="179"
+            height="11"
+            viewBox="0 0 179 11"
+            fill="none"
+          >
+            <path
+              d="M0.999969 8.34622C49.5338 0.257249 116.717 -0.416874 177.834 8.34622"
+              stroke="#F97068"
+              stroke-width="4"
+            />
+          </svg>
         </div>
-        <div class="card">
-          <div class="card-1">
-            <img src="../img/indonesia.png" alt="" />
-            <div class="accsess">
-              <h4>+ 50 Student</h4>
-            </div>
-            <h5>1 - 30 October 2023</h5>
-            <h1>Indonesian</h1>
-            <p>
-              Indonesian, you will learn with Endang Kristiani - Headmaster of
-              Kristen Kalam Kudus School.
-            </p>
-            <div class="bottom">
-              <h4>$ 380</h4>
-              <button>Enroll Now</button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img src="../img/mtk.png" alt="" />
-            <div class="accsess">
-              <h4>+ 40 Student</h4>
-            </div>
-            <h5>1 - 60 October 2023</h5>
-            <h1>Mathematics</h1>
-            <p>
-              Mathematics, you will learn with Teguh Satya - Teacher of
-              Islamic School.
-            </p>
-            <div class="bottom">
-              <h4>$ 680</h4>
-              <button>Enroll Now</button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img src="../img/ipa.png" alt="" />
-            <div class="accsess">
-              <h4>+ 80 Student</h4>
-            </div>
-            <h5>1 - 30 October 2023</h5>
-            <h1>Natural Science</h1>
-            <p>
-              Natural Science, you will learn with Nurmia Sinta - Teacher of
-              Al Azhar School.
-            </p>
-            <div class="bottom">
-              <h4>$ 380</h4>
-              <button>Enroll Now</button>
-            </div>
-          </div>
-          <div class="card-1">
-            <img src="../img/ips.png" alt="" />
-            <div class="accsess">
-              <h4>+ 90 Student</h4>
-            </div>
-            <h5>1 - 30 October 2023</h5>
-            <h1>Social Science</h1>
-            <p>
-              Social Science, you will learn with Herry Aswandi - Teacher
-              of Al Azhar School.
-            </p>
-            <div class="bottom">
-              <h4>$ 380</h4>
-              <button>Enroll Now</button>
-            </div>
-          </div>
-        </div>
+        <div class="card-container"></div>
       </div>
     </section>
     <!-- End Konten 3 -->
@@ -206,46 +147,7 @@
       <div class="banner">
         <h1>Features Include</h1>
       </div>
-      <div class="content-fill">
-        <div class="fill">
-          <img src="../img/konten-5.1.png" alt="" />
-          <h1>Latest Material</h1>
-          <p>
-            This latest material is specifically designed to inspire creativity,
-            stimulate curiosity and expand your knowledge. We believe that
-            learning should be fun and engaging, and that's what we offer here.
-          </p>
-        </div>
-        <div class="fill">
-          <img src="../img/konten-5.2.png" alt="" />
-          <h1>Material Discussion Video</h1>
-          <p>
-            We understand that every child has a different way of learning.
-            Through these learning videos, we hope to provide fun insights into
-            a variety of topics, from science to math, languages, and more.
-          </p>
-        </div>
-        <div class="fill">
-          <img src="../img/konten-5.3.png" alt="" />
-          <h1>Mentorship</h1>
-          <p>
-            Through our mentorship program, we aim to provide the necessary
-            support for children to achieve academic success and develop into
-            individuals who are creative, open-minded, and ready to face future
-            challenges.
-          </p>
-        </div>
-        <div class="fill">
-          <img src="../img/kontent-5.4.png" alt="" />
-          <h1>Community Forum</h1>
-          <p>
-            We are thrilled to have you join us on this fun, educational
-            journey. This forum is a great place to share knowledge, experience
-            and inspiration in the world of education for children.
-          </p>
-        </div>
-      </div>
-
+      <div class="content-fill"></div>
       <div id="contact" class="contact">
         <div class="text-kontak">
           <h2>Contact</h2>
@@ -286,5 +188,9 @@
     <footer-component></footer-component>
     <!-- End Footer -->
     <script src="../script/home.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

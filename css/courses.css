@@ -51,7 +51,6 @@ body {
   display: flex;
   align-items: center;
   margin: 20px;
-  margin-bottom: 0px;
 }
 
 .search-input {
@@ -92,7 +91,7 @@ body {
   justify-content: space-around;
   text-align: center;
   padding-top: 100px;
-  margin: 0px 200px;
+  margin: 0px 250px;
 }
 
 .card {
@@ -163,3 +162,68 @@ body {
 .view-courses button:active {
   scale: 0.95;
 }
+
+@media (max-width: 720px) {
+  .courses {
+    margin-top: 50px;
+  }
+
+  .banner-1 h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+  }
+
+  .banner-1 span {
+    margin-left: 8px;
+  }
+
+  .banner-1 svg {
+    margin-left: 340px;
+    width: 120px;
+  }
+
+  .banner-1 h3 {
+    margin-left: 90px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .image {
+    margin-left: 50px;
+  }
+
+  .image img {
+    width: 350px;
+  }
+
+  .content-2 {
+    margin-top: 210px;
+  }
+
+  .card {
+    margin-bottom: 50px;
+  }
+
+  .card img {
+    width: 200px;
+    height: 170px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card button {
+    width: 230px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .view-courses button {
+    width: 230px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+

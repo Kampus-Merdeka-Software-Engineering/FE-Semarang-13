@@ -1,118 +1,174 @@
 document.addEventListener("DOMContentLoaded", function() {
+  const courses = [
+    {
+      name: "Indonesian",
+      students: "+ 50 Student",
+      date: "1 - 30 October 2023",
+      instructor: "Endang Kristiani - Headmaster of Kristen Kalam Kudus School",
+      price: "$ 380",
+      image: "indonesia.png",
+    },
+    {
+      name: "Mathematics",
+      students: "+ 40 Student",
+      date: "1 - 30 October 2023",
+      instructor: "Teguh Satya - Teacher of Islamic School South Jakarta",
+      price: "$ 680",
+      image: "mtk.png",
+    },
+    {
+      name: "Natural Sciences",
+      students: "+ 80 Student",
+      date: "1 - 30 October 2023",
+      instructor: "Nurmia Sinta - Teacher of Al Azhar Center School",
+      price: "$ 380",
+      image: "ipa.png",
+    },
+    {
+      name: "Social Science",
+      students: "+ 90 Student",
+      date: "1 - 30 October 2023",
+      instructor: "Herry Aswandi - Teacher of Al Azhar Center School",
+      price: "$ 380",
+      image: "ips.png",
+    },
+  ];
 
-    const currentURL = window.location.pathname;
-    if (currentURL.includes("home.html")) {
-      // Menambahkan event listener ke link "Contact"
-      const contactLink = document.getElementById("contact-link");
-      if (contactLink) {
-        contactLink.addEventListener("click", function(event) {
-          event.preventDefault(); 
-          const contactSection = document.getElementById("contact");
-          if (contactSection) {
-            const offsetTop = contactSection.offsetTop; 
-            scrollToSection(offsetTop);
-          }
-        });
+  // Fungsi untuk membangun kartu kursus
+  function buildCourseCard(course) {
+    const card = document.createElement("div");
+    card.classList.add("card-1");
+
+    card.innerHTML = `
+      <img src="../img/${course.image}" alt="" />
+      <div class="accsess">
+        <h4>${course.students}</h4>
+      </div>
+      <h5>${course.date}</h5>
+      <h1>${course.name}</h1>
+      <p>${course.instructor}</p>
+      <div class="bottom">
+        <h4>${course.price}</h4>
+        <button>Enroll Now</button>
+      </div>
+    `;
+
+    return card;
+  }
+
+  // Fungsi untuk menambahkan card
+  function appendCourseCards() {
+    const cardContainer = document.querySelector(".card-container");
+    if (cardContainer) {
+      courses.forEach((course) => {
+        const card = buildCourseCard(course);
+        cardContainer.appendChild(card);
+      });
+    }
+  }
+
+  // Ambil elemen div dengan class "content-fill"
+const contentFill = document.querySelector('.content-fill');
+
+// Memuat data dari file JSON eksternal menggunakan fetch
+fetch('../data/data-content-fill.json')
+  .then(response => response.json())
+  .then(data => {
+    data.sections.forEach(section => {
+
+      // Buat elemen div dengan class "fill"
+      const fillDiv = document.createElement('div');
+      fillDiv.className = 'fill';
+
+      // Buat elemen img
+      const img = document.createElement('img');
+      img.src = section.imageSrc;
+      img.alt = '';
+
+      // Buat elemen h1
+      const h1 = document.createElement('h1');
+      h1.textContent = section.title;
+
+      // Buat elemen p
+      const p = document.createElement('p');
+      p.textContent = section.description;
+
+      // Gabungkan elemen-elemen di atas ke dalam "fill"
+      fillDiv.appendChild(img);
+      fillDiv.appendChild(h1);
+      fillDiv.appendChild(p);
+
+      // Gabungkan elemen "fill" ke dalam elemen "content-fill"
+      contentFill.appendChild(fillDiv);
+    });
+  })
+  .catch(error => {
+    console.error('Error loading JSON:', error);
+  });
+
+  
+  // Fungsi Scroll Contact
+  const currentURL = window.location.pathname;
+  if (currentURL.includes("home.html")) {
+    const contactLink = document.getElementById("contact-link");
+    if (contactLink) {
+      contactLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+          const offsetTop = contactSection.offsetTop;
+          scrollToSection(offsetTop);
+        }
+      });
+    }
+  }
+
+  // Fungsi efek lambat
+  function scrollToSection(offsetTop) {
+    const scrollDuration = 1000;
+    const start = window.pageYOffset;
+    const distance = offsetTop - start;
+    let startTime;
+
+    function scrollStep(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const percentage = Math.min(progress / scrollDuration, 1);
+      window.scrollTo(0, start + distance * easeInOutSine(percentage));
+
+      if (progress < scrollDuration) {
+        requestAnimationFrame(scrollStep);
       }
     }
-    
-    // Fungsi untuk menggulir halaman dengan efek lambat
-    function scrollToSection(offsetTop) {
-      const scrollDuration = 35; 
-      const scrollStep = Math.PI / (scrollDuration / 15);
-      let count = 0;
-      const start = window.pageYOffset;
-      const scrollInterval = setInterval(function(){
-        if (window.pageYOffset !== offsetTop) {
-          count = count + 1;
-          const step = Math.round(start + (offsetTop - start) * easeInOutSine(count / scrollDuration));
-          window.scrollTo(0, step);
-        } else {
-          clearInterval(scrollInterval);
-        }
-      }, 15);
-    }
-  
-    function easeInOutSine(t) {
-      return (1 - Math.cos(Math.PI * t)) / 2;
-    }
+
+    requestAnimationFrame(scrollStep);
+  }
+
+  // Fungsi menghitung scroll
+  function easeInOutSine(t) {
+    return (1 - Math.cos(Math.PI * t)) / 2;
+  }
+
+  // Panggil fungsi untuk menambahkan kartu kursus
+  appendCourseCards();
+
+
+   // Fungsi untuk menangani klik tombol "Click to Learn More"
+   function redirectToCourseView(courseName) {
+    // Redirect ke viewcourses.html dengan parameter nama kursus
+    window.location.href = `courseview.html?course=${courseName}`;
+  }
+
+  // Menambahkan event listener untuk semua tombol "Enroll Now"
+  const enrollNowButtons = document.querySelectorAll(".bottom button");
+
+  enrollNowButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const courseName = this.parentElement.parentElement.querySelector("h1").textContent;
+      redirectToCourseView(courseName);
+    });
   });
-  
 
-//  // Your JSON data
-//  const jsonData = {
-//     "content-3": {
-//         "header": "Popular Course",
-//         "courses": [
-//             {
-//                 "image": "../img/indonesia.png",
-//                 "students": "+ 50 Student",
-//                 "duration": "1 - 30 October 2023",
-//                 "title": "Indonesian",
-//                 "instructor": "Endang Kristiani - Headmaster of Kristen Kalam Kudus School",
-//                 "price": "$380",
-//                 "buttonText": "Enroll Now"
-//             },
-//             {
-//                 "image": "../img/mtk.png",
-//                 "students": "+ 40 Student",
-//                 "duration": "1 - 60 October 2023",
-//                 "title": "Mathematics",
-//                 "instructor": "Teguh Satya - Teacher of Islamic School",
-//                 "price": "$680",
-//                 "buttonText": "Enroll Now"
-//             },
-//             {
-//                 "image": "../img/ipa.png",
-//                 "students": "+ 80 Student",
-//                 "duration": "1 - 30 October 2023",
-//                 "title": "Natural Science",
-//                 "instructor": "Nurmia Sinta - Teacher of Al Azhar School",
-//                 "price": "$380",
-//                 "buttonText": "Enroll Now"
-//             },
-//             {
-//                 "image": "../img/ips.png",
-//                 "students": "+ 90 Student",
-//                 "duration": "1 - 30 October 2023",
-//                 "title": "Social Science",
-//                 "instructor": "Herry Aswandi - Headmaster of Sampoerna Academy Sentul School",
-//                 "price": "$380",
-//                 "buttonText": "Enroll Now"
-//             }
-//         ]
-//     }
-// };
+});
 
-//         // Function to display JSON data in HTML
-//         function displayCourses() {
-//             const content3 = jsonData["content-3"];
-//             document.getElementById("course-header").textContent = content3.header;
 
-//             const courseList = document.getElementById("course-list");
-//             courseList.innerHTML = '';
-
-//             content3.courses.forEach(course => {
-//                 const card = document.createElement("div");
-//                 card.className = "card-1";
-
-//                 card.innerHTML = `
-//                     <img src="${course.image}" alt="" />
-//                     <div class="accsess">
-//                         <h4>${course.students}</h4>
-//                     </div>
-//                     <h5>${course.duration}</h5>
-//                     <h1>${course.title}</h1>
-//                     <p>${course.instructor}</p>
-//                     <div class="bottom">
-//                         <h4>${course.price}</h4>
-//                         <button>${course.buttonText}</button>
-//                     </div>
-//                 `;
-
-//                 courseList.appendChild(card);
-//             });
-//         }
-
-//         // Call the function to display courses
-//         displayCourses();
