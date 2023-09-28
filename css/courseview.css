@@ -196,3 +196,13 @@ body {
   font-weight: 400;
   margin-top: 10px;
 }
+
+@media (max-width: 720px) {
+  /* Content 1 */
+  .course-view {
+    background: linear-gradient(#fcba4d, #fcba4d) 0 0 / 100% 150px no-repeat;
+  }
+
+  
+  /* End Content 1 */
+}

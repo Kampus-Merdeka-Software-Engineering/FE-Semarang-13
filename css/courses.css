@@ -164,6 +164,7 @@ body {
 }
 
 @media (max-width: 720px) {
+  /* Content 1 */
   .courses {
     margin-top: 50px;
   }
@@ -196,7 +197,9 @@ body {
   .image img {
     width: 350px;
   }
+/* End Content 1 */
 
+/* Content 2 */
   .content-2 {
     margin-top: 210px;
   }
@@ -225,5 +228,6 @@ body {
     height: 50px;
     font-size: 18px;
   }
+  /* End Content 2 */
 }
 
