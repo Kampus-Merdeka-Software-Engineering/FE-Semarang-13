@@ -181,7 +181,7 @@ p {
 }
 
 /* Responsive Tablet */
-@media (max-width: 1080px) {
+@media (min-width: 721px) and (max-width: 1080px) {
   /* Content 1 */
   .content-1 {
     height: auto;

@@ -29,7 +29,7 @@ body {
   margin-left: 200px;
 }
 
-.img-card{
+.img-card {
   margin: 0 auto;
   height: 370px;
 }
@@ -203,6 +203,235 @@ body {
     background: linear-gradient(#fcba4d, #fcba4d) 0 0 / 100% 150px no-repeat;
   }
 
-  
+  .card-course {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  .img-card {
+    height: 200px;
+  }
+
+  .card-course h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .card-course h4 {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .garis {
+    margin-left: 10px;
+    width: 210px;
+  }
+
+  .course-total {
+    margin-left: 10px;
+    margin-top: 8px;
+  }
+
+  .course-total img {
+    margin-right: 8px;
+    width: 14px;
+    height: 16px;
+  }
+
+  .course-total h5 {
+    font-size: 10px;
+  }
+
+  .vidio {
+    margin-left: 10px;
+    margin-top: 8px;
+  }
+
+  .vidio img {
+    margin-right: 8px;
+    width: 14px;
+    height: 16px;
+  }
+
+  .vidio h5 {
+    font-size: 10px;
+  }
+
+  .card-course button {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .course-detail {
+    margin-top: 50px;
+    margin-right: 80px;
+  }
+
+  .intro-card h1 {
+    width: 250px;
+    font-size: 24px;
+  }
+
+  .duration svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .duration h5 {
+    font-size: 11px;
+  }
+
+  .vidio-detail {
+    margin-top: 20px;
+  }
+
+  .about-card img {
+    width: 28px;
+    height: 18px;
+  }
+
+  .about-card h1 {
+    font-size: 14px;
+    margin-left: 12px;
+  }
+
+  .desc h3 {
+    font-size: 12px;
+    margin-top: 16px;
+  }
   /* End Content 1 */
+
+  /* Content 2 */
+  .review {
+    margin: 30px;
+    padding: 0px 50px;
+  }
+
+  .review button {
+    font-size: 16px;
+    margin-right: 0px;
+  }
+
+  .indo-desc,
+  .teacher {
+    font-size: 12px;
+    margin-top: 0px;
+  }
+  /* End Content 2 */
+}
+
+@media (min-width: 721px) and (max-width: 1080px) {
+  .course-view {
+    background: linear-gradient(#fcba4d, #fcba4d) 0 0 / 100% 230px no-repeat;
+    margin-top: 30px;
+  }
+
+  .card-course {
+    margin-top: 80px;
+    margin-left: 120px;
+  }
+
+  .img-card {
+    height: 280px;
+  }
+
+  .card-course h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .card-course h4 {
+    font-size: 14px;
+  }
+
+  .garis {
+    width: 280px;
+  }
+
+  .course-total {
+    margin-top: 16px;
+  }
+
+  .course-total img {
+    width: 16px;
+    height: 18px;
+  }
+
+  .course-total h5 {
+    font-size: 12px;
+  }
+
+  .vidio {
+    margin-top: 16px;
+  }
+
+  .vidio img {
+    width: 20px;
+    height: 22px;
+  }
+
+  .vidio h5 {
+    font-size: 12px;
+  }
+
+  .card-course button {
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .course-detail {
+    margin-top: 80px;
+    margin-right: 130px;
+  }
+
+  .intro-card h1 {
+    width: 350px;
+    font-size: 36px;
+  }
+
+  .duration svg {
+    width: 18px;
+    height: 20px;
+  }
+
+  .duration h5 {
+    font-size: 13px;
+  }
+
+  .vidio-detail {
+    margin-top: 40px;
+  }
+
+  .about-card img {
+    width: 32px;
+    height: 22px;
+  }
+
+  .about-card h1 {
+    font-size: 18px;
+    margin-left: 16px;
+  }
+
+  .desc h3 {
+    font-size: 16px;
+    margin-top: 25px;
+  }
+
+  /* Content 2 */
+  .review {
+    margin: 60px;
+    padding: 0px 70px;
+  }
+
+  .review button {
+    font-size: 18px;
+  }
+
+  .indo-desc,
+  .teacher {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+  /* End Content 2 */
 }
