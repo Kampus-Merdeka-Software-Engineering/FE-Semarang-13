@@ -187,7 +187,6 @@ class Footer extends HTMLElement {
           <a href="courses.html">Courses</a>
           <a href="about.html">About EduMbel</a>
           <a href="home.html#contact">Contact</a>
-          <a href="sendfeedback.html">Send Feedback</a>
         </div>
      
         <div class="social">
