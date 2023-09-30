@@ -9,6 +9,7 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../css/about.css" />
     <title>About EduMbel</title>
     <script src="../components/Header.js"></script>
@@ -21,7 +22,7 @@
 
     <!-- Konten 1 -->
     <section class="content-1">
-      <div class="content-about">
+      <div class="content-about" data-aos="fade-right" data-aos-duration="2000"  data-aos-delay="100">
         <h1>About</h1>
         <h2>EduMbel</h2>
         <p>
@@ -52,17 +53,17 @@
         </button>
       </div>
       <div class="img-about">
-        <img src="../img/puzzle-about.png" alt="" />
+        <img src="../img/puzzle-about.png" alt="" data-aos="fade-left" data-aos-duration="1000"/>
       </div>
     </section>
     <!-- End Konten 1 -->
 
     <!-- Konten 2 -->
     <section class="content-2">
-      <div class="header">
+      <div class="header" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
         <h1>Features Include</h1>
       </div>
-      <div class="content-fill"></div>
+      <div class="content-fill" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000"></div>
     </section>
     <!-- End Konten 2 -->
 
@@ -70,5 +71,10 @@
     <footer-component></footer-component>
     <!-- End Footer -->
     <script src="../script/about.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
   </body>
 </html>

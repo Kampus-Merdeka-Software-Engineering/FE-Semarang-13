@@ -9,6 +9,7 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../css/courseview.css" />
     <title>Course View</title>
     <script src="../components/Header.js"></script>
@@ -22,7 +23,7 @@
    <!-- Konten 1 -->
 <section class="course-view">
   <div class="course-content">
-    <div class="card-course">
+    <div class="card-course" data-aos="zoom-in-right" data-aos-duration="2000"  data-aos-delay="100">
       <img src="" alt="" class="img-card" />
       <h3></h3>
       <h4>Course Detail</h4>
@@ -37,8 +38,8 @@
       </div>
       <button>Enroll Now</button>
     </div>
-    <div class="course-detail">
-      <div class="intro-card">
+    <div class="course-detail"> 
+      <div class="intro-card" data-aos="fade-left" data-aos-duration="1000">
         <h1></h1>
         <div class="duration">
           <svg
@@ -56,7 +57,7 @@
           <h5></h5>
         </div>
       </div>
-      <div class="vidio-detail">
+      <div class="vidio-detail" data-aos="zoom-in-up" data-aos-duration="1000">
         <div class="about-card">
           <img src="../img/vidio.svg" alt="" />
           <h1>Vidio</h1>
@@ -70,7 +71,7 @@
 
 <!-- Konten 2 -->
 <section class="riview-course">
-  <div class="review">
+  <div class="review" data-aos="fade-right" data-aos-duration="1000">
     <button id="description">Description</button>
     <button id="teacher">Who Teaches</button>
     <div class="indo-desc">
@@ -87,5 +88,9 @@
     <footer-component></footer-component>
     <!-- End Footer -->
     <script src="../script/courseview.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
