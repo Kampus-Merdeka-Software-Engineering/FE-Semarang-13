@@ -172,7 +172,7 @@ body {
   .banner-1 h1 {
     display: flex;
     justify-content: center;
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .banner-1 span {
@@ -180,18 +180,18 @@ body {
   }
 
   .banner-1 svg {
-    margin-left: 340px;
-    width: 120px;
+    margin-left: 280px;
+    width: 100px;
   }
 
   .banner-1 h3 {
-    margin-left: 90px;
-    font-size: 18px;
+    margin-left: 50px;
+    font-size: 16px;
     font-weight: 400;
   }
 
   .image {
-    margin-left: 50px;
+    margin-left: 0px;
   }
 
   .image img {
@@ -201,6 +201,10 @@ body {
 
 /* Content 2 */
   .content-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 210px;
   }
 

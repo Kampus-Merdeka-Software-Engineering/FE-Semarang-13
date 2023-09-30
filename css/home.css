@@ -461,7 +461,7 @@ input[type="submit"]:active {
   }
 
   .text-form {
-    padding-right: 0px;
+    padding-right: 30px;
     margin-top: 20px;
   }
 
@@ -658,7 +658,7 @@ input[type="submit"]:active {
   input[type="text1"],
   input[type="email"] {
     font-size: 10px;
-    width: 200px;
+    width: 150px;
     height: 40px;
     margin-bottom: 0px;
     margin-top: 10px;
@@ -671,7 +671,7 @@ input[type="submit"]:active {
 
   textarea {
     font-size: 10px;
-    width: 450px;
+    width: 300px;
     height: 250px;
     margin-bottom: 0px;
   }
@@ -688,8 +688,9 @@ input[type="submit"]:active {
 @media (min-width: 721px) and (max-width: 1080px) {
   /* Content 1 */
   .text-form {
-    padding-right: 10px;
-    margin-top: 30px;
+    padding-right: 0px;
+    margin-left: 50px;
+    margin-top: 20px;
   }
 
   .text {
@@ -697,19 +698,20 @@ input[type="submit"]:active {
   }
 
   .text h1 {
-    font-size: 45px;
+    font-size: 36px;
     font-weight: 750;
   }
 
   .text h1 span {
-    font-size: 45px;
+    font-size: 36px;
     font-weight: 750;
   }
 
   .img-hero {
     margin-top: 30px;
-    width: 33rem;
-    height: 340px;
+    margin-right: 50px;
+    width: 25rem;
+    height: 260px;
   }
   /* End Content 1 */
 
@@ -782,16 +784,16 @@ input[type="submit"]:active {
   }
 
   .contact {
-    max-width: 850px;
+    max-width: 770px;
   }
 
   input[type="text1"],
   input[type="email"] {
-    width: 350px;
+    width: 330px;
   }
 
   textarea {
-    width: 750px;
+    width: 700px;
   }
   /* End Content 4 */
 }

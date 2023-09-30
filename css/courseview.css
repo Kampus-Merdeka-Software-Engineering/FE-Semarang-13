@@ -203,18 +203,26 @@ body {
     background: linear-gradient(#fcba4d, #fcba4d) 0 0 / 100% 150px no-repeat;
   }
 
+  .course-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .card-course {
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 0px;
   }
 
   .img-card {
-    height: 200px;
+    width: 300px;
+    height: 280px;
   }
 
   .card-course h3 {
-    font-size: 18px;
-    margin-bottom: 6px;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .card-course h4 {
@@ -259,13 +267,13 @@ body {
 
   .card-course button {
     width: 100%;
-    height: 40px;
+    height: 50px;
     font-size: 18px;
   }
 
   .course-detail {
     margin-top: 50px;
-    margin-right: 80px;
+    margin-right: 0px;
   }
 
   .intro-card h1 {
@@ -304,12 +312,12 @@ body {
 
   /* Content 2 */
   .review {
-    margin: 30px;
-    padding: 0px 50px;
+    margin: 30px 40px;
+    padding: 0px 0px;
   }
 
   .review button {
-    font-size: 16px;
+    font-size: 12px;
     margin-right: 0px;
   }
 
@@ -329,7 +337,7 @@ body {
 
   .card-course {
     margin-top: 80px;
-    margin-left: 120px;
+    margin-left: 60px;
   }
 
   .img-card {
@@ -382,7 +390,7 @@ body {
 
   .course-detail {
     margin-top: 80px;
-    margin-right: 130px;
+    margin-right: 60px;
   }
 
   .intro-card h1 {

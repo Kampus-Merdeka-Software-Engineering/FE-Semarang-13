@@ -88,7 +88,7 @@ class Footer extends HTMLElement {
             }
 
             .brand{
-              margin-right: 300px;
+              margin-right: 120px;
             }
 
             .brand h1 {
@@ -132,13 +132,17 @@ class Footer extends HTMLElement {
 
             .end {
               height: auto;
-              font-size: 14px;
-              padding: 10px 0;
+              font-size: 10px;
+              padding: 8px 0;
             }
           }
 
           /* Responsive Tablets */
           @media (min-width: 721px) and (max-width: 1080px) {
+            .brand{
+              margin-left: 20px;
+            }
+
             .brand h1 {
               font-size: 30px;
             }
@@ -149,10 +153,22 @@ class Footer extends HTMLElement {
 
             .quick-links h3 {
               font-size: 16px;
+              margin-left: -50px;
+            }
+
+            .quick-links a {
+              font-size: 16px;
+              margin-left: -50px;
             }
 
             .social h3 {
               font-size: 16px;
+            }
+
+            .end {
+              height: auto;
+              font-size: 14px;
+              padding: 10px 0;
             }
           }
         </style>
