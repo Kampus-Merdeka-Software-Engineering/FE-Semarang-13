@@ -192,10 +192,10 @@ class Footer extends HTMLElement {
         <div class="social">
           <h3>Social</h3>
           <div class="icon-social">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube"></i>
+          <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
          </div>
          </div>
       </footer>
