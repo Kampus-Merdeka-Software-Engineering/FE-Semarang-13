@@ -256,10 +256,10 @@ class Header extends HTMLElement {
 
     <div class="navbar-links">
         <ul>
-            <li><a id="courses-link" href="../views/courses.html" class="${
+            <li><a id="courses-link" href="./views/courses.html" class="${
               currentURL.includes("courses.html") ? "active" : ""
             }">Courses</a></li>
-            <li><a id="about-link" href="../views/about.html" class="${
+            <li><a id="about-link" href="./views/about.html" class="${
               currentURL.includes("about.html") ? "active" : ""
             }">About EduMbel</a></li>
             <li><a id="contact-link" href="index.html#contact" class="${
@@ -299,11 +299,11 @@ window.onload = function () {
   const contactLink = document.getElementById("contact-link");
 
   coursesLink.addEventListener("click", () => {
-    window.location.href = "../views/courses.html#contact";
+    window.location.href = "./views/courses.html#contact";
   });
 
   aboutLink.addEventListener("click", () => {
-    window.location.href = "../views/about.html#contact";
+    window.location.href = "./views/about.html#contact";
   });
 
   contactLink.addEventListener("click", () => {
