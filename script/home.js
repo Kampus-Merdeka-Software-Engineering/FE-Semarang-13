@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
     },
   ];
 
-  // Fungsi untuk membangun kartu kursus
   function buildCourseCard(course) {
     const card = document.createElement("div");
     card.classList.add("card-1");
@@ -56,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
     return card;
   }
 
-  // Fungsi untuk menambahkan card
   function appendCourseCards() {
     const cardContainer = document.querySelector(".card-container");
     if (cardContainer) {
@@ -67,10 +65,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // Ambil elemen div dengan class "content-fill"
 const contentFill = document.querySelector('.content-fill');
 
-// Memuat data dari file JSON eksternal menggunakan fetch
 fetch('../data/data-content-fill.json')
   .then(response => response.json())
   .then(data => {
@@ -123,7 +119,6 @@ fetch('../data/data-content-fill.json')
     }
   }
 
-  // Fungsi efek lambat
   function scrollToSection(offsetTop) {
     const scrollDuration = 1000;
     const start = window.pageYOffset;
@@ -144,22 +139,18 @@ fetch('../data/data-content-fill.json')
     requestAnimationFrame(scrollStep);
   }
 
-  // Fungsi menghitung scroll
   function easeInOutSine(t) {
     return (1 - Math.cos(Math.PI * t)) / 2;
   }
-
-  // Panggil fungsi untuk menambahkan kartu kursus
   appendCourseCards();
 
 
-   // Fungsi untuk menangani klik tombol "Click to Learn More"
+   // Fungsi klik tombol "Click to Learn More"
    function redirectToCourseView(courseName) {
-    // Redirect ke viewcourses.html dengan parameter nama kursus
     window.location.href = `courseview.html?course=${courseName}`;
   }
 
-  // Menambahkan event listener untuk semua tombol "Enroll Now"
+  // Menambahkan event listener "Enroll Now"
   const enrollNowButtons = document.querySelectorAll(".bottom button");
 
   enrollNowButtons.forEach((button) => {
