@@ -243,7 +243,7 @@ class Header extends HTMLElement {
     <header>
     <nav class="navbar">
     <div class="brand-title">
-        <a href="../views/home.html" class="navbar-brand">
+        <a href="index.html" class="navbar-brand">
             Edu<span class="navbar-brand-teks2">Mbel</span>
           </a>
     </div>
@@ -262,8 +262,8 @@ class Header extends HTMLElement {
             <li><a id="about-link" href="../views/about.html" class="${
               currentURL.includes("about.html") ? "active" : ""
             }">About EduMbel</a></li>
-            <li><a id="contact-link" href="../views/home.html#contact" class="${
-              currentURL.includes("home.html") &&
+            <li><a id="contact-link" href="index.html#contact" class="${
+              currentURL.includes("index.html") &&
               currentURL.includes("#contact")
                 ? "active"
                 : ""
