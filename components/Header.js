@@ -155,7 +155,7 @@ class Header extends HTMLElement {
     .start-button:hover {
       color: white;
       background-color: ${
-        currentURL.includes("./index.html")
+        currentURL.includes("index.html")
           ? "#F97068"
           : currentURL.includes("courses.html")
           ? "#F97068"
@@ -256,14 +256,14 @@ class Header extends HTMLElement {
 
     <div class="navbar-links">
         <ul>
-            <li><a id="courses-link" href="../views/courses.html" class="${
+            <li><a id="courses-link" href="views/courses.html" class="${
               currentURL.includes("courses.html") ? "active" : ""
             }">Courses</a></li>
             <li><a id="about-link" href="../views/about.html" class="${
               currentURL.includes("about.html") ? "active" : ""
             }">About EduMbel</a></li>
-            <li><a id="contact-link" href="../index.html#contact" class="${
-              currentURL.includes("../index.html") &&
+            <li><a id="contact-link" href="index.html#contact" class="${
+              currentURL.includes("index.html") &&
               currentURL.includes("#contact")
                 ? "active"
                 : ""
