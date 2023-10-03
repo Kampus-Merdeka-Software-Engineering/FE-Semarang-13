@@ -136,7 +136,7 @@ class Header extends HTMLElement {
       border-radius: 20px;
       color: #FFFFFF;
       background: ${
-        currentURL.includes("./index.html")
+        currentURL.includes("index.html")
           ? "#F8918B"
           : currentURL.includes("courses.html")
           ? "#57C4E5"
@@ -256,10 +256,10 @@ class Header extends HTMLElement {
 
     <div class="navbar-links">
         <ul>
-            <li><a id="courses-link" href="views/courses.html" class="${
+            <li><a id="courses-link" href="courses.html" class="${
               currentURL.includes("courses.html") ? "active" : ""
             }">Courses</a></li>
-            <li><a id="about-link" href="../views/about.html" class="${
+            <li><a id="about-link" href="about.html" class="${
               currentURL.includes("about.html") ? "active" : ""
             }">About EduMbel</a></li>
             <li><a id="contact-link" href="index.html#contact" class="${
