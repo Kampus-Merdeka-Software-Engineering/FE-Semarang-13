@@ -3,7 +3,7 @@
     "content-2": {
         "cards": [
             {
-                "imgSrc": "indonesia.png",
+                "imgSrc": "./img/indonesia.png",
                 "title": "Indonesian",
                 "buttonText": "Click to Learn More"
             },
