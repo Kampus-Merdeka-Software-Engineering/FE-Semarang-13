@@ -1,0 +1,74 @@
+{
+  "team": [
+    {
+      "name": "Jidan Haviar",
+      "role": "Team Leader",
+      "image": "anggota1.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/namalinkedin",
+        "instagram": "https://www.instagram.com/namainstagram",
+        "github": "https://github.com/namagithub"
+      }
+    },
+    {
+      "name": "Anggota Tim 1",
+      "role": "Posisi Anggota Tim 1",
+      "image": "anggota1.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/namalinkedin",
+        "instagram": "https://www.instagram.com/namainstagram",
+        "github": "https://github.com/namagithub"
+      }
+    },
+    {
+      "name": "Anggota Tim 1",
+      "role": "Posisi Anggota Tim 1",
+      "image": "anggota1.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/namalinkedin",
+        "instagram": "https://www.instagram.com/namainstagram",
+        "github": "https://github.com/namagithub"
+      }
+    },
+    {
+      "name": "Icha Puspita Sari",
+      "role": "Back-End Engineer",
+      "image": "icha.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/namalinkedin",
+        "instagram": "https://www.instagram.com/namainstagram",
+        "github": "https://github.com/namagithub"
+      }
+    },
+    {
+      "name": "Anggota Tim 1",
+      "role": "Posisi Anggota Tim 1",
+      "image": "anggota1.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/namalinkedin",
+        "instagram": "https://www.instagram.com/namainstagram",
+        "github": "https://github.com/namagithub"
+      }
+    },
+    {
+      "name": "Anggota Tim 1",
+      "role": "Posisi Anggota Tim 1",
+      "image": "anggota1.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/namalinkedin",
+        "instagram": "https://www.instagram.com/namainstagram",
+        "github": "https://github.com/namagithub"
+      }
+    },
+    {
+      "name": "Anggota Tim 1",
+      "role": "Posisi Anggota Tim 1",
+      "image": "anggota1.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/namalinkedin",
+        "instagram": "https://www.instagram.com/namainstagram",
+        "github": "https://github.com/namagithub"
+      }
+    }
+  ]
+}
