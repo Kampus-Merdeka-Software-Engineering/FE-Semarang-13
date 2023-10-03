@@ -3,22 +3,22 @@
     "content-2": {
         "cards": [
             {
-                "imgSrc": "./img/indonesia.png",
+                "imgSrc": "indonesia.png",
                 "title": "Indonesian",
                 "buttonText": "Click to Learn More"
             },
             {
-                "imgSrc": "./img/mtk.png",
+                "imgSrc": "mtk.png",
                 "title": "Mathematics",
                 "buttonText": "Click to Learn More"
             },
             {
-                "imgSrc": "./img/ipa.png",
+                "imgSrc": "ipa.png",
                 "title": "Natural Sciences",
                 "buttonText": "Click to Learn More"
             },
             {
-                "imgSrc": "./img/ips.png",
+                "imgSrc": "ips.png",
                 "title": "Social Science",
                 "buttonText": "Click to Learn More"
             },
