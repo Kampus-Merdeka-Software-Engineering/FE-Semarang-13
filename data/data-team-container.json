@@ -3,7 +3,7 @@
     {
       "name": "Jidan Haviar",
       "role": "Team Leader",
-      "image": "jidan.jpg",
+      "image": "./jidan.jpg",
       "social": {
         "linkedin": "https://www.linkedin.com/in/jidan-haviar-569857270",
         "instagram": "https://www.instagram.com/jidan_haviar",
@@ -13,7 +13,7 @@
     {
       "name": "Mariana Novantika Loru Koba",
       "role": "Front-End Engineer",
-      "image": "tika.jpg",
+      "image": "./tika.jpg",
       "social": {
         "linkedin": "https://www.linkedin.com/in/MarianaLoruKoba",
         "instagram": "https://www.instagram.com/tika01",
@@ -23,7 +23,7 @@
     {
       "name": "Humaira Asfa Revaldi",
       "role": "Front-End Engineer",
-      "image": "maia.jpg",
+      "image": "./maia.jpg",
       "social": {
         "linkedin": "https://www.linkedin.com/in/humairaasfa",
         "instagram": "https://www.instagram.com/mairaasfa",
@@ -33,7 +33,7 @@
     {
       "name": "Icha Puspita Sari",
       "role": "Back-End Engineer",
-      "image": "icha.jpg",
+      "image": "./icha.jpg",
       "social": {
         "linkedin": "https://www.linkedin.com/in/ichapsptasari",
         "instagram": "https://www.instagram.com/ichapsptaa",
@@ -43,7 +43,7 @@
     {
       "name": "Muhammad Arif Sofyan",
       "role": "Back-End Engineer",
-      "image": "arif.jpg",
+      "image": "./arif.jpg",
       "social": {
         "linkedin": "https://www.linkedin.com/in/muhammadarifsofyan",
         "instagram": "https://www.instagram.com/arifsfyn",
@@ -53,7 +53,7 @@
     {
       "name": "Hulwanul Azka Putra Pratama",
       "role": "Quality Assurance",
-      "image": "azka.jpg",
+      "image": "./azka.jpg",
       "social": {
         "linkedin": "https://www.linkedin.com/in/hulwanul-azka-putra-pratama-2734a5219",
         "instagram": "https://www.instagram.com/kaaz_pratma09",
@@ -63,7 +63,7 @@
     {
       "name": "Clarisa Deswanti Sihombing",
       "role": "Quality Assurance",
-      "image": "clarisa.jpg",
+      "image": "./clarisa.jpg",
       "social": {
         "linkedin": "https://www.linkedin.com/in/clarisa-s-198077139",
         "instagram": "https://www.instagram.com/clarisa.ds",
