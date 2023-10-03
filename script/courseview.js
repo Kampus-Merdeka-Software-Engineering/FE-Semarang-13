@@ -10,17 +10,17 @@ var courseData = {
     teacher: "Endang Kristiani - Headmaster of Kristen Kalam Kudus School",
     intro: "Introduction to Indonesian Course",
   },
-  Mathematics: {
-    imgSrc: "../img/mtk.png",
-    title: "Mathematics",
-    description:
-      "The subject of Mathematics at the elementary school level is an integral part of the basic education curriculum in Indonesia. Mathematics helps students understand and develop fundamental skills in counting, measuring, problem-solving, and grasping foundational mathematical concepts. In Mathematics classes at the elementary level, students will learn basics such as addition, subtraction, multiplication, and division, and they will also be introduced to concepts of geometry, measurement, statistics, and probability in simplified forms. The primary goal of this subject is to assist students in developing logical understanding, problem-solving skills, and critical thinking abilities.",
-    duration: "3 Months",
-    courseMaterials: "7 courses materials",
-    videos: "7 Videos",
-    teacher: "Teguh Satya - Teacher of Islamic School South Jakarta",
-    intro: "Introduction to Mathematics Course",
-  },
+    Mathematics: {
+      imgSrc: "../img/mtk.png",
+      title: "Mathematics",
+      description:
+        "The subject of Mathematics at the elementary school level is an integral part of the basic education curriculum in Indonesia. Mathematics helps students understand and develop fundamental skills in counting, measuring, problem-solving, and grasping foundational mathematical concepts. In Mathematics classes at the elementary level, students will learn basics such as addition, subtraction, multiplication, and division, and they will also be introduced to concepts of geometry, measurement, statistics, and probability in simplified forms. The primary goal of this subject is to assist students in developing logical understanding, problem-solving skills, and critical thinking abilities.",
+      duration: "3 Months",
+      courseMaterials: "7 courses materials",
+      videos: "7 Videos",
+      teacher: "Teguh Satya - Teacher of Islamic School South Jakarta",
+      intro: "Introduction to Mathematics Course",
+    },
   "Natural Sciences": {
     imgSrc: "../img/ipa.png",
     title: "Natural Sciences",
