@@ -105,7 +105,7 @@ fetch('/data/data-content-fill.json')
   
   // Fungsi Scroll Contact
   const currentURL = window.location.pathname;
-  if (currentURL.includes("home.html")) {
+  if (currentURL.includes("index.html")) {
     const contactLink = document.getElementById("contact-link");
     if (contactLink) {
       contactLink.addEventListener("click", function (event) {
