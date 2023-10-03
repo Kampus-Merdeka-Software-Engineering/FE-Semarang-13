@@ -3,31 +3,31 @@
     {
       "name": "Jidan Haviar",
       "role": "Team Leader",
-      "image": "anggota1.jpg",
+      "image": "jidan.jpg",
       "social": {
-        "linkedin": "https://www.linkedin.com/in/namalinkedin",
-        "instagram": "https://www.instagram.com/namainstagram",
-        "github": "https://github.com/namagithub"
+        "linkedin": "https://www.linkedin.com/in/jidan-haviar-569857270",
+        "instagram": "https://www.instagram.com/jidan_haviar",
+        "github": "https://github.com/jidan24"
       }
     },
     {
-      "name": "Anggota Tim 1",
-      "role": "Posisi Anggota Tim 1",
-      "image": "anggota1.jpg",
+      "name": "Mariana Novantika Loru Koba",
+      "role": "Front-End Engineer",
+      "image": "tika.jpg",
       "social": {
-        "linkedin": "https://www.linkedin.com/in/namalinkedin",
-        "instagram": "https://www.instagram.com/namainstagram",
-        "github": "https://github.com/namagithub"
+        "linkedin": "https://www.linkedin.com/in/MarianaLoruKoba",
+        "instagram": "https://www.instagram.com/tika01",
+        "github": "https://github.com/TikaLoruKoba"
       }
     },
     {
-      "name": "Anggota Tim 1",
-      "role": "Posisi Anggota Tim 1",
-      "image": "anggota1.jpg",
+      "name": "Humaira Asfa Revaldi",
+      "role": "Front-End Engineer",
+      "image": "maia.jpg",
       "social": {
-        "linkedin": "https://www.linkedin.com/in/namalinkedin",
-        "instagram": "https://www.instagram.com/namainstagram",
-        "github": "https://github.com/namagithub"
+        "linkedin": "https://www.linkedin.com/in/humairaasfa",
+        "instagram": "https://www.instagram.com/mairaasfa",
+        "github": "https://github.com/maiaasfa"
       }
     },
     {
@@ -35,39 +35,39 @@
       "role": "Back-End Engineer",
       "image": "icha.jpg",
       "social": {
-        "linkedin": "https://www.linkedin.com/in/namalinkedin",
-        "instagram": "https://www.instagram.com/namainstagram",
-        "github": "https://github.com/namagithub"
+        "linkedin": "https://www.linkedin.com/in/ichapsptasari",
+        "instagram": "https://www.instagram.com/ichapsptaa",
+        "github": "https://github.com/IchaPuspitaSari"
       }
     },
     {
-      "name": "Anggota Tim 1",
-      "role": "Posisi Anggota Tim 1",
-      "image": "anggota1.jpg",
+      "name": "Muhammad Arif Sofyan",
+      "role": "Back-End Engineer",
+      "image": "arif.jpg",
       "social": {
-        "linkedin": "https://www.linkedin.com/in/namalinkedin",
-        "instagram": "https://www.instagram.com/namainstagram",
-        "github": "https://github.com/namagithub"
+        "linkedin": "https://www.linkedin.com/in/muhammadarifsofyan",
+        "instagram": "https://www.instagram.com/arifsfyn",
+        "github": "https://github.com/Worewelf"
       }
     },
     {
-      "name": "Anggota Tim 1",
-      "role": "Posisi Anggota Tim 1",
-      "image": "anggota1.jpg",
+      "name": "Hulwanul Azka Putra Pratama",
+      "role": "Quality Assurance",
+      "image": "azka.jpg",
       "social": {
-        "linkedin": "https://www.linkedin.com/in/namalinkedin",
-        "instagram": "https://www.instagram.com/namainstagram",
-        "github": "https://github.com/namagithub"
+        "linkedin": "https://www.linkedin.com/in/hulwanul-azka-putra-pratama-2734a5219",
+        "instagram": "https://www.instagram.com/kaaz_pratma09",
+        "github": "https://github.com/HulwanulAzkaP"
       }
     },
     {
-      "name": "Anggota Tim 1",
-      "role": "Posisi Anggota Tim 1",
-      "image": "anggota1.jpg",
+      "name": "Clarisa Deswanti Sihombing",
+      "role": "Quality Assurance",
+      "image": "clarisa.jpg",
       "social": {
-        "linkedin": "https://www.linkedin.com/in/namalinkedin",
-        "instagram": "https://www.instagram.com/namainstagram",
-        "github": "https://github.com/namagithub"
+        "linkedin": "https://www.linkedin.com/in/clarisa-s-198077139",
+        "instagram": "https://www.instagram.com/clarisa.ds",
+        "github": "https://github.com/clarisads106"
       }
     }
   ]
