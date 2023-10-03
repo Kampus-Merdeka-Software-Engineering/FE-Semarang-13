@@ -136,7 +136,7 @@ class Header extends HTMLElement {
       border-radius: 20px;
       color: #FFFFFF;
       background: ${
-        currentURL.includes("home.html")
+        currentURL.includes("index.html")
           ? "#F8918B"
           : currentURL.includes("courses.html")
           ? "#57C4E5"
@@ -155,7 +155,7 @@ class Header extends HTMLElement {
     .start-button:hover {
       color: white;
       background-color: ${
-        currentURL.includes("home.html")
+        currentURL.includes("index.html")
           ? "#F97068"
           : currentURL.includes("courses.html")
           ? "#F97068"
@@ -243,7 +243,7 @@ class Header extends HTMLElement {
     <header>
     <nav class="navbar">
     <div class="brand-title">
-        <a href="index.html" class="navbar-brand">
+        <a href="../index.html" class="navbar-brand">
             Edu<span class="navbar-brand-teks2">Mbel</span>
           </a>
     </div>
@@ -256,14 +256,14 @@ class Header extends HTMLElement {
 
     <div class="navbar-links">
         <ul>
-            <li><a id="courses-link" href="./views/courses.html" class="${
+            <li><a id="courses-link" href="../views/courses.html" class="${
               currentURL.includes("courses.html") ? "active" : ""
             }">Courses</a></li>
-            <li><a id="about-link" href="./views/about.html" class="${
+            <li><a id="about-link" href="../views/about.html" class="${
               currentURL.includes("about.html") ? "active" : ""
             }">About EduMbel</a></li>
-            <li><a id="contact-link" href="index.html#contact" class="${
-              currentURL.includes("index.html") &&
+            <li><a id="contact-link" href="../index.html#contact" class="${
+              currentURL.includes("../index.html") &&
               currentURL.includes("#contact")
                 ? "active"
                 : ""
@@ -299,11 +299,11 @@ window.onload = function () {
   const contactLink = document.getElementById("contact-link");
 
   coursesLink.addEventListener("click", () => {
-    window.location.href = "./views/courses.html#contact";
+    window.location.href = "../views/courses.html#contact";
   });
 
   aboutLink.addEventListener("click", () => {
-    window.location.href = "./views/about.html#contact";
+    window.location.href = "../views/about.html#contact";
   });
 
   contactLink.addEventListener("click", () => {
