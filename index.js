@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     card.classList.add("card-1");
 
     card.innerHTML = `
-      <img src="/img/${course.image}" alt="" />
+      <img src="./img/${course.image}" alt="" />
       <div class="accsess">
         <h4>${course.students}</h4>
       </div>
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const contentFill = document.querySelector('.content-fill');
 
-fetch('/data/data-content-fill.json')
+fetch('./data/data-content-fill.json')
   .then(response => response.json())
   .then(data => {
     data.sections.forEach(section => {
