@@ -1,6 +1,6 @@
 // Fungsi untuk memuat dan menampilkan data tim dari JSON
 function loadAndDisplayTeam() {
-  fetch('../data/data-team-container.json') // Perhatikan perubahan path
+  fetch('./data/data-team-container.json') // Perhatikan perubahan path
     .then(response => response.json())
     .then(data => {
       // Ambil elemen div dengan id "team-container"
