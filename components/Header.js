@@ -136,7 +136,7 @@ class Header extends HTMLElement {
       border-radius: 20px;
       color: #FFFFFF;
       background: ${
-        currentURL.includes("index.html")
+        currentURL.includes("./index.html")
           ? "#F8918B"
           : currentURL.includes("courses.html")
           ? "#57C4E5"
@@ -155,7 +155,7 @@ class Header extends HTMLElement {
     .start-button:hover {
       color: white;
       background-color: ${
-        currentURL.includes("index.html")
+        currentURL.includes("./index.html")
           ? "#F97068"
           : currentURL.includes("courses.html")
           ? "#F97068"
