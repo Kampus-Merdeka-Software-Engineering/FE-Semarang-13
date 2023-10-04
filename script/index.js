@@ -117,7 +117,19 @@ fetch('./data/data-content-fill.json')
         }
       });
     }
-  }
+  
+    const popularCourseLink = document.getElementById("popular-course-link");
+    if (popularCourseLink) {
+      popularCourseLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        const popularCourseSection = document.getElementById("popular-course");
+        if (popularCourseSection) {
+          const offsetTop = popularCourseSection.offsetTop;
+          scrollToSection(offsetTop);
+        }
+      });
+    }
+  }  
 
   function scrollToSection(offsetTop) {
     const scrollDuration = 1000;

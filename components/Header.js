@@ -262,6 +262,12 @@ class Header extends HTMLElement {
             <li><a id="about-link" href="about.html" class="${
               currentURL.includes("about.html") ? "active" : ""
             }">About EduMbel</a></li>
+            <li><a id="popular-course-link" href="index.html#popular-course" class="${
+              currentURL.includes("index.html") &&
+              currentURL.includes("#popular-course")
+                ? "active"
+                : ""
+            }">Popular Course</a></li>
             <li><a id="contact-link" href="index.html#contact" class="${
               currentURL.includes("index.html") &&
               currentURL.includes("#contact")
@@ -297,6 +303,7 @@ window.onload = function () {
   const coursesLink = document.getElementById("courses-link");
   const aboutLink = document.getElementById("about-link");
   const contactLink = document.getElementById("contact-link");
+  const popularLink = document.getElementById("popular-course-link");
 
   coursesLink.addEventListener("click", () => {
     window.location.href = "../views/courses.html#contact";
@@ -308,6 +315,10 @@ window.onload = function () {
 
   contactLink.addEventListener("click", () => {
     window.location.hash = "#contact";
+  });
+
+  popularLink.addEventListener("click", () => {
+    window.location.hash = "#popular-course";
   });
 };
 
