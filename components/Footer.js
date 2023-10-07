@@ -184,8 +184,8 @@ class Footer extends HTMLElement {
      
         <div class="quick-links">
         <h3>Quick Links</h3>
-        <a href="../views/courses.html">Courses</a>
-        <a href="../views/about.html">About EduMbel</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../about.html">About EduMbel</a>
         <a href="../index.html#popular-course">Popular Course</a>
         <a href="../index.html#contact">Contact</a>
       </div>

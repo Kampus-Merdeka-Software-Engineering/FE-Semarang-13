@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fungsi klik tombol "Enroll Now"
   function redirectToCourseView(courseId) {
-    window.location.href = `../views/courseview.html?course=${courseId}`;
+    window.location.href = `../courseview.html?course=${courseId}`;
   }
 
   const contentFill = document.querySelector(".content-fill");
