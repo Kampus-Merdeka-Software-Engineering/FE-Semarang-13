@@ -5,7 +5,7 @@ function populateContent() {
   var cardsContainer = document.getElementById("cards-container");
   var viewCoursesButton = document.getElementById("view-courses-button");
 
-  // Fetch course data from the API
+  // Fetch data course dari API
   fetch(`${API_BASE_URL}/views/courses`)
     .then((response) => response.json())
     .then((data) => {
@@ -23,7 +23,7 @@ function populateContent() {
         var button = document.createElement("button");
         button.textContent = "Click to Learn More";
         button.addEventListener("click", function () {
-          redirectToCourseView(courseData.id); // Pass the course ID
+          redirectToCourseView(courseData.id);
         });
 
         card.appendChild(img);
@@ -42,7 +42,7 @@ function populateContent() {
 
 populateContent();
 
-// Fungsi untuk menangani klik tombol "Click to Learn More"
+// Learn More Button
 function redirectToCourseView(courseId) {
   window.location.href = `courseview.html?course=${courseId}`;
 }

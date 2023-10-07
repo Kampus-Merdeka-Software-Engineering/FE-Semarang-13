@@ -12,6 +12,7 @@ body {
   background-color: #f8918b;
 }
 
+/* Content 1 */
 .courses {
   display: flex;
   justify-content: center;
@@ -78,7 +79,9 @@ body {
   position: absolute;
   z-index: -1;
 }
+/* End Content 1 */
 
+/* Content 2 */
 .content-2 {
   margin-top: 300px;
   border-radius: 70px 70px 0px 0px;
@@ -162,6 +165,7 @@ body {
 .view-courses button:active {
   scale: 0.95;
 }
+/* End Content 2 */
 
 @media (max-width: 720px) {
   /* Content 1 */

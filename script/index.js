@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const API_BASE_URL = "https://be-semarang-13-production.up.railway.app";
+const API_BASE_URL = "https://be-semarang-13-production.up.railway.app";
 
+document.addEventListener("DOMContentLoaded", function () {
   function buildCourseCard(course) {
     const card = document.createElement("div");
     card.classList.add("card-1");
@@ -33,55 +33,52 @@ document.addEventListener("DOMContentLoaded", function () {
             cardContainer.appendChild(card);
           });
 
-           // Menambahkan event listener "Enroll Now" setelah data kursus dimuat
-           const enrollButtons = document.querySelectorAll(".enroll-button");
-           enrollButtons.forEach((button) => {
-             button.addEventListener("click", function () {
-               const courseId = button.getAttribute("data-course-id");
-               redirectToCourseView(courseId);
-             });
-           });
-         })
-         .catch((error) => {
-           console.error("Error fetching data:", error);
-         });
-     }
-   }
+          // Menambahkan event listener "Enroll Now"
+          const enrollButtons = document.querySelectorAll(".enroll-button");
+          enrollButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+              const courseId = button.getAttribute("data-course-id");
+              redirectToCourseView(courseId);
+            });
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    }
+  }
 
-    // Fungsi klik tombol "Enroll Now"
+  // Fungsi klik tombol "Enroll Now"
   function redirectToCourseView(courseId) {
     window.location.href = `../views/courseview.html?course=${courseId}`;
   }
 
-const contentFill = document.querySelector('.content-fill');
-  
+  const contentFill = document.querySelector(".content-fill");
+
   // Fungsi Scroll Contact
-  const currentURL = window.location.pathname;
-  if (currentURL.includes("index.html")) {
-    const contactLink = document.getElementById("contact-link");
-    if (contactLink) {
-      contactLink.addEventListener("click", function (event) {
-        event.preventDefault();
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-          const offsetTop = contactSection.offsetTop;
-          scrollToSection(offsetTop);
-        }
-      });
-    }
-  
-    const popularCourseLink = document.getElementById("popular-course-link");
-    if (popularCourseLink) {
-      popularCourseLink.addEventListener("click", function (event) {
-        event.preventDefault();
-        const popularCourseSection = document.getElementById("popular-course");
-        if (popularCourseSection) {
-          const offsetTop = popularCourseSection.offsetTop;
-          scrollToSection(offsetTop);
-        }
-      });
-    }
-  }  
+  const contactLink = document.getElementById("contact-link");
+  if (contactLink) {
+    contactLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        const offsetTop = contactSection.offsetTop;
+        scrollToSection(offsetTop);
+      }
+    });
+  }
+
+  const popularCourseLink = document.getElementById("popular-course-link");
+  if (popularCourseLink) {
+    popularCourseLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      const popularCourseSection = document.getElementById("popular-course");
+      if (popularCourseSection) {
+        const offsetTop = popularCourseSection.offsetTop;
+        scrollToSection(offsetTop);
+      }
+    });
+  }
 
   function scrollToSection(offsetTop) {
     const scrollDuration = 1000;
@@ -106,5 +103,59 @@ const contentFill = document.querySelector('.content-fill');
   function easeInOutSine(t) {
     return (1 - Math.cos(Math.PI * t)) / 2;
   }
+
   appendCourseCards();
+
+  const form = document.querySelector("#contact-form");
+  const submitButton = document.querySelector("#submit-button");
+
+  form.setAttribute("action", "/submit-form");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    // Object Form
+    const formObject = {
+      name: document.querySelector("#nama").value,
+      email: document.querySelector("#email").value,
+      message: document.querySelector("#message").value,
+    };
+
+    try {
+      // Mengirimkan Form Menggunakan POST
+      const response = await fetch("/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formObject),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      form.reset();
+
+      // Menampilkan Sukses
+      Swal.fire({
+        icon: "success",
+        title: "Thank You!",
+        html: `<p>Your message has been successfully sent!</p>`,
+        showConfirmButton: false,
+        timer: 5000,
+      });
+    } catch (error) {
+      console.error("Error sending form data:", error);
+
+      // Menampilkan Error
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "There was an error sending your message. Please try again later.",
+      });
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
 });
