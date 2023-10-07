@@ -255,26 +255,25 @@ class Header extends HTMLElement {
     </a>
 
     <div class="navbar-links">
-        <ul>
-            <li><a id="courses-link" href="courses.html" class="${
-              currentURL.includes("courses.html") ? "active" : ""
-            }">Courses</a></li>
-            <li><a id="about-link" href="about.html" class="${
-              currentURL.includes("about.html") ? "active" : ""
-            }">About EduMbel</a></li>
-            <li><a id="popular-course-link" href="index.html#popular-course" class="${
-              currentURL.includes("index.html") &&
-              currentURL.includes("#popular-course")
-                ? "active"
-                : ""
-            }">Popular Course</a></li>
-            <li><a id="contact-link" href="index.html#contact" class="${
-              currentURL.includes("index.html") &&
-              currentURL.includes("#contact")
-                ? "active"
-                : ""
-            }">Contact</a></li>
-        </ul>
+    <ul>
+    <li><a id="courses-link" href="../views/courses.html" class="${
+      currentURL.includes("courses.html") ? "active" : ""
+    }">Courses</a></li>
+    <li><a id="about-link" href="../views/about.html" class="${
+      currentURL.includes("about.html") ? "active" : ""
+    }">About EduMbel</a></li>
+    <li><a id="popular-course-link" href="../index.html#popular-course" class="${
+      currentURL.includes("index.html") &&
+      currentURL.includes("#popular-course")
+        ? "active"
+        : ""
+    }">Popular Course</a></li>
+    <li><a id="contact-link" href="../index.html#contact" class="${
+      currentURL.includes("index.html") && currentURL.includes("#contact")
+        ? "active"
+        : ""
+    }">Contact</a></li>
+</ul>
     </div>
 
     <div class="account-and-start">

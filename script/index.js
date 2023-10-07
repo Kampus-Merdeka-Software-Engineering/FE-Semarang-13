@@ -1,54 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const courses = [
-    {
-      name: "Indonesian",
-      students: "+ 50 Student",
-      date: "1 - 30 October 2023",
-      instructor: "Endang Kristiani - Headmaster of Kristen Kalam Kudus School",
-      price: "$ 380",
-      image: "indonesia.png",
-    },
-    {
-      name: "Mathematics",
-      students: "+ 40 Student",
-      date: "1 - 30 October 2023",
-      instructor: "Teguh Satya - Teacher of Islamic School South Jakarta",
-      price: "$ 680",
-      image: "mtk.png",
-    },
-    {
-      name: "Natural Sciences",
-      students: "+ 80 Student",
-      date: "1 - 30 October 2023",
-      instructor: "Nurmia Sinta - Teacher of Al Azhar Center School",
-      price: "$ 380",
-      image: "ipa.png",
-    },
-    {
-      name: "Social Science",
-      students: "+ 90 Student",
-      date: "1 - 30 October 2023",
-      instructor: "Herry Aswandi - Teacher of Al Azhar Center School",
-      price: "$ 380",
-      image: "ips.png",
-    },
-  ];
+document.addEventListener("DOMContentLoaded", function () {
+  const API_BASE_URL = "https://be-semarang-13-production.up.railway.app";
 
   function buildCourseCard(course) {
     const card = document.createElement("div");
     card.classList.add("card-1");
 
     card.innerHTML = `
-      <img src="./img/${course.image}" alt="" />
+      <img src="${course.imgSrc}" alt="" />
       <div class="accsess">
         <h4>${course.students}</h4>
       </div>
       <h5>${course.date}</h5>
-      <h1>${course.name}</h1>
-      <p>${course.instructor}</p>
+      <h1>${course.title}</h1>
+      <p>${course.teacher}</p>
       <div class="bottom">
         <h4>${course.price}</h4>
-        <button>Enroll Now</button>
+        <button class="enroll-button" data-course-id="${course.id}">Enroll Now</button>
       </div>
     `;
 
@@ -58,50 +25,35 @@ document.addEventListener("DOMContentLoaded", function() {
   function appendCourseCards() {
     const cardContainer = document.querySelector(".card-container");
     if (cardContainer) {
-      courses.forEach((course) => {
-        const card = buildCourseCard(course);
-        cardContainer.appendChild(card);
-      });
-    }
+      fetch(`${API_BASE_URL}/index`)
+        .then((response) => response.json())
+        .then((data) => {
+          data.forEach(function (courseData) {
+            const card = buildCourseCard(courseData);
+            cardContainer.appendChild(card);
+          });
+
+           // Menambahkan event listener "Enroll Now" setelah data kursus dimuat
+           const enrollButtons = document.querySelectorAll(".enroll-button");
+           enrollButtons.forEach((button) => {
+             button.addEventListener("click", function () {
+               const courseId = button.getAttribute("data-course-id");
+               redirectToCourseView(courseId);
+             });
+           });
+         })
+         .catch((error) => {
+           console.error("Error fetching data:", error);
+         });
+     }
+   }
+
+    // Fungsi klik tombol "Enroll Now"
+  function redirectToCourseView(courseId) {
+    window.location.href = `../views/courseview.html?course=${courseId}`;
   }
 
 const contentFill = document.querySelector('.content-fill');
-
-fetch('./data/data-content-fill.json')
-  .then(response => response.json())
-  .then(data => {
-    data.sections.forEach(section => {
-
-      // Buat elemen div dengan class "fill"
-      const fillDiv = document.createElement('div');
-      fillDiv.className = 'fill';
-
-      // Buat elemen img
-      const img = document.createElement('img');
-      img.src = section.imageSrc;
-      img.alt = '';
-
-      // Buat elemen h1
-      const h1 = document.createElement('h1');
-      h1.textContent = section.title;
-
-      // Buat elemen p
-      const p = document.createElement('p');
-      p.textContent = section.description;
-
-      // Gabungkan elemen-elemen di atas ke dalam "fill"
-      fillDiv.appendChild(img);
-      fillDiv.appendChild(h1);
-      fillDiv.appendChild(p);
-
-      // Gabungkan elemen "fill" ke dalam elemen "content-fill"
-      contentFill.appendChild(fillDiv);
-    });
-  })
-  .catch(error => {
-    console.error('Error loading JSON:', error);
-  });
-
   
   // Fungsi Scroll Contact
   const currentURL = window.location.pathname;
@@ -155,23 +107,4 @@ fetch('./data/data-content-fill.json')
     return (1 - Math.cos(Math.PI * t)) / 2;
   }
   appendCourseCards();
-
-
-   // Fungsi klik tombol "Click to Learn More"
-   function redirectToCourseView(courseName) {
-    window.location.href = `courseview.html?course=${courseName}`;
-  }
-
-  // Menambahkan event listener "Enroll Now"
-  const enrollNowButtons = document.querySelectorAll(".bottom button");
-
-  enrollNowButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const courseName = this.parentElement.parentElement.querySelector("h1").textContent;
-      redirectToCourseView(courseName);
-    });
-  });
-
 });
-
-
