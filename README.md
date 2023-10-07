@@ -5,7 +5,7 @@
 Selamat datang di repository proyek "EduMbel"! <br>
 Kami adalah tim yang berdedikasi untuk menciptakan pengalaman belajar yang menyenangkan dan interaktif untuk anak-anak tingkat sekolah dasar.
 
-![Logo EduMbel](<link to your logo image>)
+![Logo EduMbel](<https://github.com/Kampus-Merdeka-Software-Engineering/FE-Semarang-13/blob/main/img/EduMbel.png>)
 
 ## 📌 Tentang Proyek
 
