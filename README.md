@@ -40,7 +40,7 @@ Proyek "EduMbel" dibangun dengan berbagai teknologi, yaitu sebagai berikut:
 2. Install dependensi dengan menjalankan perintah `npm install`.
 3. Jalankan proyek dengan perintah `npm start`.
 
-[![Buka Proyek](<https://kampus-merdeka-software-engineering.github.io/FE-Semarang-13/>)]
+[![Buka Proyek](<https://img.shields.io/badge/Open_Project-Edu_Mbel-pink>)](<https://kampus-merdeka-software-engineering.github.io/FE-Semarang-13/>)
 
 ## 👩‍🏫 Tim 13 Section Semarang
 
