@@ -256,19 +256,19 @@ class Header extends HTMLElement {
 
     <div class="navbar-links">
     <ul>
-    <li><a id="courses-link" href="../courses.html" class="${
+    <li><a id="courses-link" href="./courses.html" class="${
       currentURL.includes("courses.html") ? "active" : ""
     }">Courses</a></li>
-    <li><a id="about-link" href="../about.html" class="${
+    <li><a id="about-link" href="./about.html" class="${
       currentURL.includes("about.html") ? "active" : ""
     }">About EduMbel</a></li>
-    <li><a id="popular-course-link" href="../index.html#popular-course" class="${
+    <li><a id="popular-course-link" href="./index.html#popular-course" class="${
       currentURL.includes("index.html") &&
       currentURL.includes("#popular-course")
         ? "active"
         : ""
     }">Popular Course</a></li>
-    <li><a id="contact-link" href="../index.html#contact" class="${
+    <li><a id="contact-link" href="./index.html#contact" class="${
       currentURL.includes("index.html") && currentURL.includes("#contact")
         ? "active"
         : ""
@@ -282,7 +282,33 @@ class Header extends HTMLElement {
     </div>
     </header>
   `;
+    // Menambahkan kelas "active" ke tautan sesuai dengan halaman yang sedang aktif
+    const currentPage = window.location.href;
+    const { username, repositoryName } = getRepositoryName();
+    const links = [
+      { id: "courses-link", url: `./courses.html` },
+      { id: "about-link", url: `./about.html` },
+      { id: "popular-course-link", url: `./index.html#popular-course` },
+      { id: "contact-link", url: `./index.html#contact` },
+    ];
+    for (const link of links) {
+      const linkElement = this.querySelector(`#${link.id}`);
+      if (linkElement) {
+        const linkURL = `/${username}/${repositoryName}/${link.url}`;
+        if (currentPage.endsWith(linkURL)) {
+          linkElement.classList.add("active");
+        }
+      }
+    }
   }
+}
+
+function getRepositoryName() {
+  const currentURL = window.location.href;
+  const parts = currentURL.split("/");
+  const username = parts[3];
+  const repositoryName = parts[4];
+  return { username, repositoryName };
 }
 
 window.onload = function () {
@@ -305,11 +331,11 @@ window.onload = function () {
   const popularLink = document.getElementById("popular-course-link");
 
   coursesLink.addEventListener("click", () => {
-    window.location.href = "../courses.html#contact";
+    window.location.href = "./courses.html#contact";
   });
 
   aboutLink.addEventListener("click", () => {
-    window.location.href = "../about.html#contact";
+    window.location.href = "./about.html#contact";
   });
 
   contactLink.addEventListener("click", () => {
