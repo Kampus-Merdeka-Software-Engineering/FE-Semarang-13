@@ -106,56 +106,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
   appendCourseCards();
 
+
+  // Handle form submission
   const form = document.querySelector("#contact-form");
-  const submitButton = document.querySelector("#submit-button");
-
-  form.setAttribute("action", "/submit-form");
-
   form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Mencegah perubahan URL yang default
 
-    // Object Form
-    const formObject = {
-      name: document.querySelector("#nama").value,
+    // Mendefinisikan data formulir dengan struktur yang diinginkan
+    const formData = {
+      nama: document.querySelector("#nama").value,
       email: document.querySelector("#email").value,
       message: document.querySelector("#message").value,
     };
 
     try {
-      // Mengirimkan Form Menggunakan POST
-      const response = await fetch("/submit-form", {
+      // Mengirimkan data formulir ke server menggunakan endpoint API
+      const response = await fetch(`${API_BASE_URL}/index`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formObject),
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
 
+      // Reset formulir setelah pengiriman yang berhasil
       form.reset();
 
-      // Menampilkan Sukses
+      // Menampilkan pesan pop-up menggunakan Sweet Alert
       Swal.fire({
         icon: "success",
         title: "Thank You!",
-        html: `<p>Your message has been successfully sent!</p>`,
+        text: "Your message has been successfully sent!",
         showConfirmButton: false,
-        timer: 5000,
+        timer: 2000, // Menutup popup setelah 2 detik
+      }).then(() => {
+        // Refresh halaman setelah menutup popup
+        location.reload();
       });
     } catch (error) {
       console.error("Error sending form data:", error);
-
-      // Menampilkan Error
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "There was an error sending your message. Please try again later.",
-      });
-    } finally {
-      submitButton.disabled = false;
     }
   });
 });

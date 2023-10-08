@@ -32,7 +32,7 @@
             </h1>
           </div>
           <div class="form-search">
-            <form action="" method="GET">
+            <div class="search-container" id="search-container">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -54,11 +54,12 @@
               </svg>
               <input
                 type="text"
-                name="query"
+                id="search-input"
                 placeholder="Find the Course you Choose"
                 class="input-search"
               />
-              <button type="submit">Search</button>
+              <button id="search-button" type="button">Search</button>
+          </div>
           </div>
         </div>
           <img src="./img/pict-home.png" alt=""  class="img-hero" data-aos="fade-left" data-aos-duration="1000"/>
@@ -194,18 +195,17 @@
           </p>
         </div>
         <div class="isi-kontak">
-          <form id="contact-form" method="post">
+          <form id="contact-form" action="/index" method="POST">
             <div class="nama-email" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="200">
               <div class="nama">
-                <input class="input-nama" type="text" id="nama" name="nama" placeholder="Full Name" required>
+                <input class="input-nama" type="text" id="nama" placeholder="Full Name" required>
               </div>
               <div class="email">
-                <input class="input-email" type="email" id="email" name="email" placeholder="Email Address" required>
+                <input class="input-email" type="email" id="email" placeholder="Email Address" required>
               </div>
             </div>
             <div class="message" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="400">
               <textarea
-                name="message"
                 id="message"
                 cols="30"
                 rows="10"
