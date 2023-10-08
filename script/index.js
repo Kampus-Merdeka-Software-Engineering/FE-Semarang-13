@@ -48,10 +48,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  const { repositoryName } = getRepositoryName();
+
   // Fungsi klik tombol "Enroll Now"
   function redirectToCourseView(courseId) {
-    window.location.href = `../courseview.html?course=${courseId}`;
+    window.location.href = `/${repositoryName}/courseview.html?course=${courseId}`;
   }
+
+  
+function getRepositoryName() {
+  const currentURL = window.location.href;
+  const parts = currentURL.split("/");
+  const repositoryName = parts[4];
+  return { repositoryName };
+}
+
 
   const contentFill = document.querySelector(".content-fill");
 
