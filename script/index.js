@@ -48,19 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  const { repositoryName } = getRepositoryName();
-
-  // Fungsi klik tombol "Enroll Now"
-  function redirectToCourseView(courseId) {
-    window.location.href = `/${repositoryName}/courseview.html?course=${courseId}`;
-  }
-
-  
-function getRepositoryName() {
-  const currentURL = window.location.href;
-  const parts = currentURL.split("/");
-  const repositoryName = parts[4];
-  return { repositoryName };
+ // Fungsi klik tombol "Enroll Now"
+function redirectToCourseView(courseId) {
+  window.location.href = `https://kampus-merdeka-software-engineering.github.io/FE-Semarang-13/courseview.html?course=${courseId}`;
 }
 
 
