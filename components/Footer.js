@@ -184,10 +184,10 @@ class Footer extends HTMLElement {
      
         <div class="quick-links">
         <h3>Quick Links</h3>
-        <a href="./courses.html">Courses</a>
-        <a href="./about.html">About EduMbel</a>
-        <a href="./index.html#popular-course">Popular Course</a>
-        <a href="./index.html#contact">Contact</a>
+        <a href="./courses.html" id="coursesLink">Courses</a>
+        <a href="./about.html" id="aboutLink">About EduMbel</a>
+        <a href="./index.html#popular-course" id="popular-courseLink">Popular Course</a>
+        <a href="./index.html#contact" id="contactLink">Contact</a>
       </div>
      
         <div class="social">
@@ -204,7 +204,33 @@ class Footer extends HTMLElement {
       ©2023 - EduMbel. All Rights Reserved.
       </div>
       `;
-  }
+ // Menambahkan kelas "active" ke tautan sesuai dengan halaman yang sedang aktif
+ const currentPage = window.location.href;
+ const { username, repositoryName } = getRepositoryName();
+ const links = [
+   { id: "coursesLink", url: `./courses.html` },
+   { id: "aboutLink", url: `./about.html` },
+   { id: "popular-courseLink", url: `./index.html#popular-course` },
+   { id: "contactLink", url: `./index.html#contact` },
+ ];
+ for (const link of links) {
+   const linkElement = this.querySelector(`#${link.id}`);
+   if (linkElement) {
+     const linkURL = `/${username}/${repositoryName}/${link.url}`;
+     if (currentPage.endsWith(linkURL)) {
+       linkElement.classList.add("active");
+     }
+   }
+ }
+}
+}
+
+function getRepositoryName() {
+const currentURL = window.location.href;
+const parts = currentURL.split("/");
+const username = parts[3];
+const repositoryName = parts[4];
+return { username, repositoryName };
 }
 
 customElements.define("footer-component", Footer);
