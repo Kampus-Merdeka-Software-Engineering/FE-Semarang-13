@@ -138,6 +138,8 @@ class Header extends HTMLElement {
       background: ${
         currentURL.includes("index.html")
           ? "#F8918B"
+          : currentURL.includes(`/${username}/${repositoryName}/`)
+          ? "#F8918B"
           : currentURL.includes("courses.html")
           ? "#57C4E5"
           : currentURL.includes("courseview.html")
@@ -156,6 +158,8 @@ class Header extends HTMLElement {
       color: white;
       background-color: ${
         currentURL.includes("index.html")
+          ? "#F97068"
+          : currentURL.includes(`/${username}/${repositoryName}/`)
           ? "#F97068"
           : currentURL.includes("courses.html")
           ? "#F97068"
