@@ -243,7 +243,7 @@ class Header extends HTMLElement {
     <header>
     <nav class="navbar">
     <div class="brand-title">
-        <a href="../index.html" class="navbar-brand">
+        <a id="index-link" href="./index.html" class="navbar-brand">
             Edu<span class="navbar-brand-teks2">Mbel</span>
           </a>
     </div>
@@ -286,6 +286,7 @@ class Header extends HTMLElement {
     const currentPage = window.location.href;
     const { username, repositoryName } = getRepositoryName();
     const links = [
+      { id: "index-link", url: `./index.html` },
       { id: "courses-link", url: `./courses.html` },
       { id: "about-link", url: `./about.html` },
       { id: "popular-course-link", url: `./index.html#popular-course` },
