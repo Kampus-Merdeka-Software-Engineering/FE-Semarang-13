@@ -194,7 +194,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 450px;
   background: #d1d646;
   border-radius: 0px 0px 70px 70px;
 }
@@ -556,7 +556,7 @@ textarea {
   }
 
   .background {
-    height: 20%;
+    height: 300px;
   }
 
   .header-content-3 h1 {
@@ -785,7 +785,7 @@ textarea {
 
   /*Content 3 */
   .background {
-    height: 34%;
+    height: 430px;
   }
 
   .header-content-3 h1 {
