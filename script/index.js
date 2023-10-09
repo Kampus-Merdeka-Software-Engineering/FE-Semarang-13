@@ -48,11 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
- // Fungsi klik tombol "Enroll Now"
-function redirectToCourseView(courseId) {
-  window.location.href = `https://kampus-merdeka-software-engineering.github.io/FE-Semarang-13/courseview.html?course=${courseId}`;
-}
-
+  // Fungsi klik tombol "Enroll Now"
+  function redirectToCourseView(courseId) {
+    window.location.href = `https://kampus-merdeka-software-engineering.github.io/FE-Semarang-13/courseview.html?course=${courseId}`;
+  }
 
   const contentFill = document.querySelector(".content-fill");
 
@@ -107,13 +106,11 @@ function redirectToCourseView(courseId) {
 
   appendCourseCards();
 
-
-  // Handle form submission
+  // Handle form
   const form = document.querySelector("#contact-form");
   form.addEventListener("submit", async (event) => {
-    event.preventDefault(); // Mencegah perubahan URL yang default
+    event.preventDefault();
 
-    // Mendefinisikan data formulir dengan struktur yang diinginkan
     const formData = {
       nama: document.querySelector("#nama").value,
       email: document.querySelector("#email").value,
@@ -121,7 +118,7 @@ function redirectToCourseView(courseId) {
     };
 
     try {
-      // Mengirimkan data formulir ke server menggunakan endpoint API
+      // Mengirimkan data formulir
       const response = await fetch(`${API_BASE_URL}/index`, {
         method: "POST",
         headers: {
@@ -134,18 +131,16 @@ function redirectToCourseView(courseId) {
         throw new Error("Network response was not ok");
       }
 
-      // Reset formulir setelah pengiriman yang berhasil
       form.reset();
 
-      // Menampilkan pesan pop-up menggunakan Sweet Alert
+      // Menampilkan pesan pop-up
       Swal.fire({
         icon: "success",
         title: "Thank You!",
         text: "Your message has been successfully sent!",
         showConfirmButton: false,
-        timer: 2000, // Menutup popup setelah 2 detik
+        timer: 2000,
       }).then(() => {
-        // Refresh halaman setelah menutup popup
         location.reload();
       });
     } catch (error) {
