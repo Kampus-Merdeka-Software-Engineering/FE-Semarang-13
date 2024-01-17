@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://be-semarang-13-production.up.railway.app";
+const API_BASE_URL = "http://localhost:3000";
 
 document.addEventListener("DOMContentLoaded", function () {
   function buildCourseCard(course) {
@@ -48,9 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Fungsi klik tombol "Enroll Now"
   function redirectToCourseView(courseId) {
-    window.location.href = `https://kampus-merdeka-software-engineering.github.io/FE-Semarang-13/courseview.html?course=${courseId}`;
+    window.location.href = `courseview.html?course=${courseId}`;
   }
 
   const contentFill = document.querySelector(".content-fill");

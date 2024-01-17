@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://be-semarang-13-production.up.railway.app"; // Update with your API URL
+const API_BASE_URL = "http://localhost:3000";
 
 // Fungsi untuk menampilkan data dari API
 function populateContent() {
@@ -6,7 +6,7 @@ function populateContent() {
   var viewCoursesButton = document.getElementById("view-courses-button");
 
   // Fetch data course dari API
-  fetch(`${API_BASE_URL}/views/courses`)
+  fetch(`${API_BASE_URL}/courses`)
     .then((response) => response.json())
     .then((data) => {
       data.forEach(function (courseData) {

@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://be-semarang-13-production.up.railway.app";
+const API_BASE_URL = "http://localhost:3000";
 
 document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Fetch data course dari API
-  fetch(`${API_BASE_URL}/views/courseview.html?course=${courseId}`)
+  fetch(`${API_BASE_URL}/courseview.html?course=${courseId}`)
     .then(response => response.json())
     .then((data) => {
 

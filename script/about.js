@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://be-semarang-13-production.up.railway.app";
+const API_BASE_URL = "http://localhost:3000";
 
 // Fungsi menampilkan data tim dari API
 function loadAndDisplayTeam() {
